@@ -17,7 +17,7 @@ jobs:
           node-version: 16
       - run: npm ci
 
-  publish-npm:
+  publish-npm-renderer:
     needs: build
     runs-on: ubuntu-latest
     permissions:
@@ -29,8 +29,44 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org
-      - run: npm ci
-      - run: npm run build
-      - run: npm publish --access public
+      - run: npm ci -w @react-shader-fiber/renderer
+      - run: npm run build -w @react-shader-fiber/renderer
+      - run: npm publish -w @react-shader-fiber/renderer --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
+  publish-npm-stdlib:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: https://registry.npmjs.org
+      - run: npm ci -w @react-shader-fiber/stdlib
+      - run: npm run build -w @react-shader-fiber/stdlib
+      - run: npm publish -w @react-shader-fiber/stdlib --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
+  publish-npm-rsf:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: https://registry.npmjs.org
+      - run: npm ci -w react-shader-fiber
+      - run: npm run build react-shader-fiber
+      - run: npm publish -w react-shader-fiber --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
