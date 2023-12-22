@@ -23,6 +23,3 @@ jobs:
           # for more options
           release-type: node
           monorepo-tags: true
-          extra-files: |
-            packages/stdlib/package.json
-            packages/renderer/package.json
