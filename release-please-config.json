@@ -3,6 +3,14 @@
     "packages/renderer": {
       "changelog-path": "CHANGELOG.md",
       "release-type": "node"
+    },
+    "packages/stdlib": {
+      "changelog-path": "CHANGELOG.md",
+      "release-type": "node"
+    },
+    "packages/react-shader-fiber": {
+      "changelog-path": "CHANGELOG.md",
+      "release-type": "node"
     }
   },
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
