@@ -5,7 +5,9 @@
   "type": "module",
   "license": "MIT",
   "author": "Philip Pavo",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/rsf-renderer.js",
   "scripts": {
     "dev": "vite",
@@ -18,5 +20,21 @@
   "dependencies": {
     "react-reconciler": "^0.29.0",
     "vitest": "^1.1.0"
-  }
+  },
+  "description": "Renderer for React Shader Fiber",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pavophilip/react-shader-fiber.git#main"
+  },
+  "keywords": [
+    "react",
+    "renderer",
+    "shader",
+    "reconciler",
+    "webgl"
+  ],
+  "bugs": {
+    "url": "https://github.com/pavophilip/react-shader-fiber/issues"
+  },
+  "homepage": "https://github.com/pavophilip/react-shader-fiber/tree/main#readme"
 }
