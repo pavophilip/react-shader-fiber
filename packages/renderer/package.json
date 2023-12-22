@@ -1,0 +1,22 @@
+{
+  "name": "@react-shader-fiber/renderer",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "license": "MIT",
+  "author": "Philip Pavo",
+  "files": ["dist"],
+  "main": "./dist/rsf-renderer.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.8"
+  },
+  "dependencies": {
+    "react-reconciler": "^0.29.0",
+    "vitest": "^1.1.0"
+  }
+}
