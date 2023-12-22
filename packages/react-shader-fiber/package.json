@@ -1,6 +1,6 @@
 {
   "name": "react-shader-fiber",
-  "private": true,
+  "private": false,
   "version": "1.0.0",
   "type": "module",
   "files": [
@@ -18,7 +18,7 @@
   "author": "Philip Pavo",
   "dependencies": {
     "@clotur/player": "^0.1.2",
-    "@react-shader-fiber/renderer": "^0.0.0",
+    "@react-shader-fiber/renderer": "^1.0.1",
     "@thi.ng/shader-ast": "^0.12.87",
     "@thi.ng/shader-ast-glsl": "^0.4.87",
     "react": "^18.2.0",

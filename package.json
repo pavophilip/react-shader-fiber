@@ -1,13 +1,14 @@
 {
   "name": "react-shader-fiber--root",
   "private": true,
-  "version": "1.0.0",
   "type": "module",
   "scripts": {},
   "license": "MIT",
   "author": "Philip Pavo",
   "workspaces": [
-    "./packages/*"
+    "./packages/renderer",
+    "./packages/stdlib",
+    "./packages/react-shader-fiber"
   ],
   "devDependencies": {
     "prettier": "^3.1.1",

@@ -1,6 +1,6 @@
 {
   "name": "@react-shader-fiber/stdlib",
-  "private": true,
+  "private": false,
   "version": "1.0.0",
   "type": "module",
   "main": "./dist/rsf-stdlib.js",
@@ -15,7 +15,7 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@react-shader-fiber/renderer": "^0.0.0",
+    "@react-shader-fiber/renderer": "^1.0.1",
     "@thi.ng/shader-ast": "^0.12.88",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
