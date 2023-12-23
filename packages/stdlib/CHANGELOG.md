@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.7](https://github.com/pavophilip/react-shader-fiber/compare/stdlib-v1.0.6...stdlib-v1.0.7) (2023-12-23)
+
+
+### Bug Fixes
+
+* update package.json module property ([20a5bbb](https://github.com/pavophilip/react-shader-fiber/commit/20a5bbb64761161ad626c8dc70b986fb2b85ea26))
+
 ## [1.0.6](https://github.com/pavophilip/react-shader-fiber/compare/stdlib-v1.0.5...stdlib-v1.0.6) (2023-12-23)
 
 
