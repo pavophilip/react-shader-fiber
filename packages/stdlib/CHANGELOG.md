@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/pavophilip/react-shader-fiber/compare/stdlib-v1.0.1...stdlib-v1.0.2) (2023-12-23)
+
+
+### Bug Fixes
+
+* remove vitest from deps ([cd0af65](https://github.com/pavophilip/react-shader-fiber/commit/cd0af659a67d9ff784ed361aec631f29ad3be86c))
+
 ## [1.0.1](https://github.com/pavophilip/react-shader-fiber/compare/stdlib-v1.0.0...stdlib-v1.0.1) (2023-12-22)
 
 
