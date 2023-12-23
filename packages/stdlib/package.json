@@ -4,6 +4,7 @@
   "version": "1.0.5",
   "type": "module",
   "main": "./dist/rsf-stdlib.js",
+  "module": "./dist/rsf-stdlib.umd.cjs",
   "files": [
     "dist"
   ],
