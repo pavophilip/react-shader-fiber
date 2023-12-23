@@ -1,7 +1,7 @@
 {
   "name": "@react-shader-fiber/renderer",
   "private": false,
-  "version": "1.0.7",
+  "version": "1.0.8",
   "type": "module",
   "license": "MIT",
   "author": "Philip Pavo",
