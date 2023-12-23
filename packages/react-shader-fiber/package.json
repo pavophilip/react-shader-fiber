@@ -18,7 +18,7 @@
   "author": "Philip Pavo",
   "dependencies": {
     "@clotur/player": "^0.1.2",
-    "@react-shader-fiber/renderer": "^1.0.11",
+    "@react-shader-fiber/renderer": "^1.0.12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
