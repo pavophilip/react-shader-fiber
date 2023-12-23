@@ -8,7 +8,6 @@
   "files": [
     "dist"
   ],
-  "module": "./dist/rsf-renderer.umd.cjs",
   "main": "./dist/rsf-renderer.js",
   "scripts": {
     "dev": "vite",
