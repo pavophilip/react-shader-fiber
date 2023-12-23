@@ -1,5 +1,5 @@
 {
-  "packages/renderer": "1.0.5",
+  "packages/renderer": "1.0.6",
   "packages/stdlib": "1.0.7",
   "packages/react-shader-fiber": "1.0.6"
 }

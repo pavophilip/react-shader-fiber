@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.6](https://github.com/pavophilip/react-shader-fiber/compare/renderer-v1.0.5...renderer-v1.0.6) (2023-12-23)
+
+
+### Bug Fixes
+
+* update readme ([07c7880](https://github.com/pavophilip/react-shader-fiber/commit/07c7880508ca8e77dfe8a0c4e6d86f9fc92c4381))
+
 ## [1.0.5](https://github.com/pavophilip/react-shader-fiber/compare/renderer-v1.0.4...renderer-v1.0.5) (2023-12-23)
 
 
