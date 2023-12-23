@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.7](https://github.com/pavophilip/react-shader-fiber/compare/react-shader-fiber-v1.0.6...react-shader-fiber-v1.0.7) (2023-12-23)
+
+
+### Bug Fixes
+
+* update versions ([519322b](https://github.com/pavophilip/react-shader-fiber/commit/519322b13d0b045490142ba6a3e4072d1db6ac34))
+
 ## [1.0.6](https://github.com/pavophilip/react-shader-fiber/compare/react-shader-fiber-v1.0.5...react-shader-fiber-v1.0.6) (2023-12-23)
 
 
