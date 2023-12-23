@@ -9,6 +9,7 @@ on:
 
 jobs:
   publish-npm-renderer:
+    if: startsWith(github.event.release.name, 'renderer')
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -26,6 +27,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
   publish-npm-stdlib:
+    if: startsWith(github.event.release.name, 'stdlib')
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -45,6 +47,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
   publish-npm-rsf:
+    if: startsWith(github.event.release.name, 'react-shader-fiber')
     runs-on: ubuntu-latest
     permissions:
       contents: read
