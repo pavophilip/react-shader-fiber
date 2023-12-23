@@ -20,6 +20,7 @@ jobs:
         with:
           node-version: 18
           registry-url: https://registry.npmjs.org
+      - run: npm -v
       - run: npm ci -w @react-shader-fiber/renderer
       - run: npm run build -w @react-shader-fiber/renderer
       - run: npm publish -w @react-shader-fiber/renderer --access public
