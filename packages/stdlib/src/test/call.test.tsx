@@ -1,4 +1,4 @@
-import RSF from "@react-shader-fiber/renderer";
+import { testRenderer } from "@react-shader-fiber/renderer";
 import { expect, test } from "vitest";
 import { float, input } from "@thi.ng/shader-ast";
 import { funcall } from "@thi.ng/shader-ast/ast/function";
@@ -6,7 +6,7 @@ import { Call, Float } from "../components/glsl";
 import VCoords from "../components/glsl/VCoords.tsx";
 
 test("Call Fn", () => {
-  const ast = RSF.testRender(
+  const ast = testRender(
     <Call fn={"circle"} type={"float"}>
       <VCoords />
       <Float value={0.5} />

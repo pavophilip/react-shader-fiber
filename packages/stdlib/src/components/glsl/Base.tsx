@@ -1,21 +1,13 @@
-import {
+import React, {
   cloneElement,
-  forwardRef,
   isValidElement,
+  PropsWithChildren,
   ReactNode,
-  Ref,
 } from "react";
 import isFloat from "../../utils/isFloat.ts";
 import { float } from "@thi.ng/shader-ast";
 import normalizeChildren from "../../utils/normalizeChildren.ts";
 import { Ast } from "@react-shader-fiber/renderer";
-
-interface BaseProps<T extends (...args: any[]) => any> {
-  gen: T;
-  args: Parameters<T>;
-  processArgs?: (args: Parameters<T>) => Parameters<T>;
-  children?: ReactNode;
-}
 
 const useArgs = (args: any[], children: ReactNode) => {
   const argsChildren = args
@@ -49,18 +41,32 @@ const useArgs = (args: any[], children: ReactNode) => {
   return [getArgs, renderChildren];
 };
 
-const Base = forwardRef(
-  <T extends (...args: any[]) => any>(
-    { gen, args, processArgs, children }: BaseProps<T>,
-    ref: Ref<any>,
-  ) => {
-    const [getArgs, renderChildren] = useArgs(args, children);
-    return (
-      <Ast ref={ref} gen={gen} args={getArgs} processArgs={processArgs}>
-        {renderChildren}
-      </Ast>
-    );
-  },
-);
+type ReactElementParameters<T> = {
+  [P in keyof Parameters<T>]:
+    | React.ReactElement<Parameters<T>[P]>
+    | Parameters<T>[P];
+};
 
-export default Base;
+interface BaseProps<T> {
+  gen: T;
+  args: ReactElementParameters<Parameters<T>>;
+  processArgs?: (args: Parameters<T>) => Parameters<T>;
+}
+
+export default React.forwardRef(function Base<T>(
+  props: PropsWithChildren<BaseProps<T>>,
+  ref,
+) {
+  const [getArgs, renderChildren] = useArgs(props.args, props.children);
+
+  return (
+    <Ast
+      ref={ref}
+      gen={props.gen}
+      args={getArgs}
+      processArgs={props.processArgs}
+    >
+      {renderChildren}
+    </Ast>
+  );
+});
