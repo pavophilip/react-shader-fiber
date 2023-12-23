@@ -18,28 +18,30 @@ function App() {
 
   const radiusRef = useRef();
   return (
-    <FragmentShader prelude={[circle]}>
-      <FragColor ref={fragColorRef} />
+    <div>
+      <FragmentShader prelude={[circle]}>
+        <FragColor ref={fragColorRef} />
 
-      <Input ref={vCoordsRef} type={"vec2"} id={"vCoords"} />
+        <Input ref={vCoordsRef} type={"vec2"} id={"vCoords"} />
 
-      <Main>
-        <Float ref={radiusRef} value={0.5} />
+        <Main>
+          <Float ref={radiusRef} value={0.5} />
 
-        <Assign to={fragColorRef}>
-          <Vec4
-            x={0}
-            y={0}
-            z={
-              <Call fn={"circle"} type={"float"}>
-                {vCoordsRef}
-                <Float value={0.5} />
-              </Call>
-            }
-          />
-        </Assign>
-      </Main>
-    </FragmentShader>
+          <Assign to={fragColorRef}>
+            <Vec4
+              x={0}
+              y={0}
+              z={
+                <Call fn={"circle"} type={"float"}>
+                  {vCoordsRef}
+                  <Float value={0.5} />
+                </Call>
+              }
+            />
+          </Assign>
+        </Main>
+      </FragmentShader>
+    </div>
   );
 }
 
