@@ -7,12 +7,12 @@ export default defineConfig({
   build: {
     lib: {
       // @ts-expect-error cwd
-      entry: resolve(process.cwd(), "src/main.ts"),
-      name: "RSF",
+      entry: resolve(__dirname, "src/main.ts"),
+      name: "RSFStdlib",
       fileName: "rsf-stdlib",
     },
     rollupOptions: {
-      external: ["react"],
+      external: ["react", 'react-dom'],
       output: {
         globals: {
           react: "React",
