@@ -6,7 +6,7 @@ import { Call, Float } from "../components/glsl";
 import VCoords from "../components/glsl/VCoords.tsx";
 
 test("Call Fn", () => {
-  const ast = testRender(
+  const ast = testRenderer(
     <Call fn={"circle"} type={"float"}>
       <VCoords />
       <Float value={0.5} />
