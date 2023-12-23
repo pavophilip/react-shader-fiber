@@ -11,7 +11,7 @@ export default defineConfig({
       fileName: "rsf",
     },
     rollupOptions: {
-      external: ["react"],
+      external: ["react", "react-dom"],
       output: {
         globals: {
           react: "React",

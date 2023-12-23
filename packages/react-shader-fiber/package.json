@@ -7,6 +7,7 @@
     "dist"
   ],
   "main": "./dist/rsf.js",
+  "module": "./dist/rsf.umd.cjs",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -18,13 +19,12 @@
   "author": "Philip Pavo",
   "dependencies": {
     "@clotur/player": "^0.1.2",
-    "@react-shader-fiber/renderer": "^1.0.1",
-    "@thi.ng/shader-ast": "^0.12.87",
-    "@thi.ng/shader-ast-glsl": "^0.4.87",
+    "@react-shader-fiber/renderer": "^1.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@thi.ng/shader-ast-glsl": "^0.4.88",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
     "@vitejs/plugin-react-swc": "^3.5.0",
