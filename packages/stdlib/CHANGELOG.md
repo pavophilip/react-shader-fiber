@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.14](https://github.com/pavophilip/react-shader-fiber/compare/stdlib-v1.0.13...stdlib-v1.0.14) (2023-12-23)
+
+
+### Bug Fixes
+
+* update render import ([baee322](https://github.com/pavophilip/react-shader-fiber/commit/baee322904a79ba5ebab13248c904d727e09669f))
+
 ## [1.0.13](https://github.com/pavophilip/react-shader-fiber/compare/stdlib-v1.0.12...stdlib-v1.0.13) (2023-12-23)
 
 
