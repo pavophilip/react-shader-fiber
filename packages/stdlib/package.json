@@ -1,7 +1,7 @@
 {
   "name": "@react-shader-fiber/stdlib",
   "private": false,
-  "version": "1.0.10",
+  "version": "1.0.11",
   "type": "module",
   "main": "./dist/rsf-stdlib.js",
   "files": [
