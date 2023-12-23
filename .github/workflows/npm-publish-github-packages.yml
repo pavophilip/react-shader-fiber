@@ -4,9 +4,8 @@
 name: Node.js Package
 
 on:
-  push:
-    branches:
-      - main
+  release:
+    types: [created]
 
 jobs:
   publish-npm-renderer:
@@ -28,10 +27,6 @@ jobs:
 
   publish-npm-stdlib:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-        working-directory: ./packages/stdlib
     permissions:
       contents: read
       packages: write
@@ -41,9 +36,11 @@ jobs:
         with:
           node-version: 18
           registry-url: https://registry.npmjs.org
-      - run: npm ci
-      - run: npm run build
-      - run: npm publish --access public
+      - run: npm ci -w @react-shader-fiber/renderer
+      - run: npm run build -w @react-shader-fiber/renderer
+      - run: npm ci -w @react-shader-fiber/stdlib
+      - run: npm run build -w @react-shader-fiber/stdlib
+      - run: npm publish -w @react-shader-fiber/stdlib --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
