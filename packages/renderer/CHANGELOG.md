@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.8](https://github.com/pavophilip/react-shader-fiber/compare/renderer-v1.0.7...renderer-v1.0.8) (2023-12-23)
+
+
+### Bug Fixes
+
+* update pipeline ([66bc698](https://github.com/pavophilip/react-shader-fiber/commit/66bc698034e02b20bdc430359ed7d59ecef443bf))
+
 ## [1.0.7](https://github.com/pavophilip/react-shader-fiber/compare/renderer-v1.0.6...renderer-v1.0.7) (2023-12-23)
 
 
