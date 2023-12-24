@@ -10,11 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@fontsource/inter": "^5.0.16",
+    "@mui/joy": "^5.0.0-beta.19",
     "@react-shader-fiber/renderer": "^1.0.12",
     "@react-shader-fiber/stdlib": "^1.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-shader-fiber": "^1.0.10"
+    "react-shader-fiber": "^1.1.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
