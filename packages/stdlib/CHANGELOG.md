@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.0](https://github.com/pavophilip/react-shader-fiber/compare/stdlib-v1.0.14...stdlib-v1.1.0) (2023-12-24)
+
+
+### Features
+
+* **components:** add built components ([af53b5b](https://github.com/pavophilip/react-shader-fiber/commit/af53b5ba201f5443e373aea60cc7f4393df778a3))
+* **components:** add components int, float, bool, uint, vec, vec2, vec3, vec4 ([590c7d7](https://github.com/pavophilip/react-shader-fiber/commit/590c7d7129bfa07b51fa45b9b71b1e5795147a9e))
+
+
+### Bug Fixes
+
+* **test:** renderer import ([7a129a3](https://github.com/pavophilip/react-shader-fiber/commit/7a129a3c62779eb3dbfc1f55d34ce97bc8d60b8e))
+
 ## [1.0.14](https://github.com/pavophilip/react-shader-fiber/compare/stdlib-v1.0.13...stdlib-v1.0.14) (2023-12-23)
 
 
