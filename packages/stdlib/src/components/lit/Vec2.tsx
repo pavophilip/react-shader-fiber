@@ -21,7 +21,7 @@ const VecFnMap = {
 export default forwardRef<
   FC,
   PropsWithChildren<{
-    type: VecTypeEnum;
+    type?: VecTypeEnum;
     x?: ItemType;
     y?: ItemType;
     value?: Vec2;

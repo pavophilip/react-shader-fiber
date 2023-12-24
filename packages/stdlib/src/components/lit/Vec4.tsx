@@ -9,7 +9,7 @@ import getVectorValue from "../../utils/getVectorValue.ts";
 
 type ItemType = Int | Float | Bool | ReactElement;
 
-export type Vec4 = [ItemType, ItemType];
+export type Vec4 = [ItemType, ItemType, ItemType, ItemType];
 
 const VecFnMap = {
   [VecTypeEnum.vec]: vec4,
