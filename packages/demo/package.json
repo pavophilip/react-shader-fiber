@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@react-shader-fiber/renderer": "^1.0.12",
-    "@react-shader-fiber/stdlib": "^1.0.14",
+    "@react-shader-fiber/stdlib": "^1.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-shader-fiber": "^1.0.10"

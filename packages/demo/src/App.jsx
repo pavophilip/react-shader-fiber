@@ -6,7 +6,7 @@ import {
   Assign,
   Call,
   Float,
-  FragColor,
+  Output,
   Input,
   Main,
   Vec4,
@@ -16,17 +16,14 @@ function App() {
   const fragColorRef = useRef();
   const vCoordsRef = useRef();
 
-  const radiusRef = useRef();
   return (
     <div>
       <FragmentShader prelude={[circle]}>
-        <FragColor ref={fragColorRef} />
+        <Output type={"vec4"} id={"fragColor"} ref={fragColorRef} />
 
         <Input ref={vCoordsRef} type={"vec2"} id={"vCoords"} />
 
         <Main>
-          <Float ref={radiusRef} value={0.5} />
-
           <Assign to={fragColorRef}>
             <Vec4
               x={0}
@@ -37,6 +34,7 @@ function App() {
                   <Float value={0.5} />
                 </Call>
               }
+              w={1}
             />
           </Assign>
         </Main>
