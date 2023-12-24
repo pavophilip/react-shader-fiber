@@ -40,21 +40,19 @@ const useArgs = (args: any[], children: ReactNode) => {
 
   return [getArgs, renderChildren];
 };
+//
+// type ReactElementParameters<T> = {
+//   [P in keyof Parameters<T>]: React.ReactElement | Parameters<T>[P];
+// };
 
-type ReactElementParameters<T> = {
-  [P in keyof Parameters<T>]:
-    | React.ReactElement<Parameters<T>[P]>
-    | Parameters<T>[P];
-};
-
-interface BaseProps<T> {
-  gen: T;
-  args: ReactElementParameters<Parameters<T>>;
-  processArgs?: (args: Parameters<T>) => Parameters<T>;
+interface BaseProps {
+  gen: any;
+  args: any[];
+  processArgs?: (args: any[]) => any[];
 }
 
-export default React.forwardRef(function Base<T>(
-  props: PropsWithChildren<BaseProps<T>>,
+export default React.forwardRef(function Base(
+  props: PropsWithChildren<BaseProps>,
   ref,
 ) {
   const [getArgs, renderChildren] = useArgs(props.args, props.children);
