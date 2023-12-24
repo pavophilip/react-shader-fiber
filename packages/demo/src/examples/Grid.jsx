@@ -29,23 +29,16 @@ const Gradient = () => {
             x={0.1}
             y={0.1}
             z={
-              <Step
-                a={
-                  <Fract
-                    a={
-                      <X
-                        of={
-                          <Mul>
-                            {vCoordsRef}
-                            <Float value={10} />
-                          </Mul>
-                        }
-                      />
-                    }
-                  />
-                }
-                b={0.5}
-              />
+              <Step edge={0.5}>
+                <Fract>
+                  <X>
+                    <Mul>
+                      {vCoordsRef}
+                      <Float value={10} />
+                    </Mul>
+                  </X>
+                </Fract>
+              </Step>
             }
             w={1}
           />
