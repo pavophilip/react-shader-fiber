@@ -31,7 +31,12 @@ const useRenderShader = (el) => {
   );
 };
 
-const FragmentShader = ({ prelude = "", children }) => {
+const FragmentShader = ({
+  prelude = "",
+  width = 256,
+  height = 256,
+  children,
+}) => {
   const preludeStr = Array.isArray(prelude) ? prelude.join(`\n`) : prelude;
 
   const tree = useRenderShader(children);
@@ -50,10 +55,10 @@ const FragmentShader = ({ prelude = "", children }) => {
     <div
       {...player}
       style={{
-        width: 600,
-        height: 600,
+        width,
+        height,
       }}
-    ></div>
+    />
   );
 };
 
