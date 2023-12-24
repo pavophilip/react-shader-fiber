@@ -7,7 +7,9 @@ import {
   Main,
   Mul,
   Output,
+  Sin,
   Step,
+  Uniform,
   Vec4,
   X,
 } from "@react-shader-fiber/stdlib";
@@ -16,12 +18,15 @@ import { useRef } from "react";
 const Gradient = () => {
   const fragColorRef = useRef();
   const vCoordsRef = useRef();
+  const timeRef = useRef();
 
   return (
     <FragmentShader>
       <Output type={"vec4"} id={"fragColor"} ref={fragColorRef} />
 
       <Input ref={vCoordsRef} type={"vec2"} id={"vCoords"} />
+
+      <Uniform ref={timeRef} id={"u_time"} type={"float"} />
 
       <Main>
         <Assign to={fragColorRef}>
@@ -34,7 +39,10 @@ const Gradient = () => {
                   <X>
                     <Mul>
                       {vCoordsRef}
-                      <Float value={10} />
+                      <Mul>
+                        <Sin of={timeRef} />
+                        <Float value={10} />
+                      </Mul>
                     </Mul>
                   </X>
                 </Fract>
