@@ -9,6 +9,6 @@ export default forwardRef<
     a: Float | ReactElement;
     b: Float | ReactElement;
   }>
->(function Pow({ a, b }) {
-  return <Base gen={pow} args={[a, b]} />;
+>(function Pow({ a, b }, ref) {
+  return <Base ref={ref} gen={pow} args={[a, b]} />;
 });

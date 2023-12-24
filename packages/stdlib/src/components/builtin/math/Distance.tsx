@@ -9,6 +9,6 @@ export default forwardRef<
     from: Vec | ReactElement;
     to: Vec | ReactElement;
   }>
->(function Distance({ from, to }) {
-  return <Base gen={distance} args={[from, to]} />;
+>(function Distance({ from, to }, ref) {
+  return <Base ref={ref} gen={distance} args={[from, to]} />;
 });

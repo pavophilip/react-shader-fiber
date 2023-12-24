@@ -6,8 +6,8 @@ import { length } from "@thi.ng/shader-ast";
 export default forwardRef<
   FC,
   PropsWithChildren<{
-    value: Vec | ReactElement;
+    of: Vec | ReactElement;
   }>
->(function Normalize({ value }) {
-  return <Base gen={length} args={[value]} />;
+>(function Normalize({ of }, ref) {
+  return <Base ref={ref} gen={length} args={[of]} />;
 });

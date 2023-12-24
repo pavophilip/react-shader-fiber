@@ -8,6 +8,6 @@ export default forwardRef<
   PropsWithChildren<{
     a: Float | ReactElement;
   }>
->(function Log({ a }) {
-  return <Base gen={log} args={[a]} />;
+>(function Log({ a }, ref) {
+  return <Base ref={ref} gen={log} args={[a]} />;
 });

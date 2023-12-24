@@ -8,6 +8,6 @@ export default forwardRef<
   PropsWithChildren<{
     of: Float | ReactElement;
   }>
->(function Asin({ of }) {
-  return <Base gen={asin} args={[of]} />;
+>(function Asin({ of }, ref) {
+  return <Base ref={ref} gen={asin} args={[of]} />;
 });

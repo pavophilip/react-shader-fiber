@@ -8,6 +8,6 @@ export default forwardRef<
   PropsWithChildren<{
     radians: Float | ReactElement;
   }>
->(function Degrees({ radians }) {
-  return <Base gen={degrees} args={[radians]} />;
+>(function Degrees({ radians }, ref) {
+  return <Base ref={ref} gen={degrees} args={[radians]} />;
 });

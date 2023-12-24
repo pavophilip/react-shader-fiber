@@ -7,6 +7,6 @@ export default forwardRef<
   PropsWithChildren<{
     value: ReactElement;
   }>
->(function Increment({ value }) {
-  return <Base gen={dec} args={[value]} />;
+>(function Increment({ value }, ref) {
+  return <Base ref={ref} gen={dec} args={[value]} />;
 });

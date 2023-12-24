@@ -28,8 +28,12 @@ export default forwardRef<
     w?: ItemType;
     value?: Vec4;
   }>
->(function Vec4({ x, y, z, w, value, type = VecTypeEnum.vec }) {
+>(function Vec4({ x, y, z, w, value, type = VecTypeEnum.vec }, ref) {
   return (
-    <Base gen={VecFnMap[type]} args={value || getVectorValue(x, y, z, w)} />
+    <Base
+      ref={ref}
+      gen={VecFnMap[type]}
+      args={value || getVectorValue(x, y, z, w)}
+    />
   );
 });

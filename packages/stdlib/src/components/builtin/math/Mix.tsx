@@ -10,6 +10,6 @@ export default forwardRef<
     b: Float | ReactElement;
     c: Float | ReactElement;
   }>
->(function Mix({ a, b, c }) {
-  return <Base gen={mix} args={[a, b, c]} />;
+>(function Mix({ a, b, c }, ref) {
+  return <Base ref={ref} gen={mix} args={[a, b, c]} />;
 });

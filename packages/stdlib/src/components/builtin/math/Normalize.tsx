@@ -8,6 +8,6 @@ export default forwardRef<
   PropsWithChildren<{
     value: Vec | ReactElement;
   }>
->(function Normalize({ value }) {
-  return <Base gen={normalize} args={[value]} />;
+>(function Normalize({ value }, ref) {
+  return <Base ref={ref} gen={normalize} args={[value]} />;
 });

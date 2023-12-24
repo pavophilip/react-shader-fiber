@@ -8,6 +8,6 @@ export default forwardRef<
   PropsWithChildren<{
     a: Float | ReactElement;
   }>
->(function Exp2({ a }) {
-  return <Base gen={exp2} args={[a]} />;
+>(function Exp2({ a }, ref) {
+  return <Base ref={ref} gen={exp2} args={[a]} />;
 });

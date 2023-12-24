@@ -11,6 +11,6 @@ export default forwardRef<
     a: Float | Int | UInt | ReactElement;
     b: Float | Int | UInt | ReactElement;
   }>
->(function Min({ a, b }) {
-  return <Base gen={min} args={[a, b]} />;
+>(function Min({ a, b }, ref) {
+  return <Base ref={ref} gen={min} args={[a, b]} />;
 });

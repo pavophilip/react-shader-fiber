@@ -6,8 +6,8 @@ import { Float } from "../../lit/Float.tsx";
 export default forwardRef<
   FC,
   PropsWithChildren<{
-    a: Float | ReactElement;
+    value: Float | ReactElement;
   }>
->(function Ceil({ a }) {
-  return <Base gen={ceil} args={[a]} />;
+>(function Ceil({ value }, ref) {
+  return <Base ref={ref} gen={ceil} args={[value]} />;
 });

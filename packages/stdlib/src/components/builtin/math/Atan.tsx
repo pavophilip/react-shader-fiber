@@ -10,6 +10,6 @@ export default forwardRef<
     x?: Float | ReactElement;
     of?: Float | ReactElement;
   }>
->(function Atan({ of, y, x }) {
-  return <Base gen={atan} args={of ? [of] : [y, x]} />;
+>(function Atan({ of, y, x }, ref) {
+  return <Base ref={ref} gen={atan} args={of ? [of] : [y, x]} />;
 });

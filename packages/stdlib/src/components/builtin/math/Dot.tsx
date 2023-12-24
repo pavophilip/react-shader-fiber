@@ -9,6 +9,6 @@ export default forwardRef<
     a: Vec | ReactElement;
     b: Vec | ReactElement;
   }>
->(function Dot({ a, b }) {
-  return <Base gen={dot} args={[a, b]} />;
+>(function Dot({ a, b }, ref) {
+  return <Base ref={ref} gen={dot} args={[a, b]} />;
 });

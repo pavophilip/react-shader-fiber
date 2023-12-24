@@ -9,6 +9,6 @@ export default forwardRef<
     a: Float | ReactElement;
     b: Float | ReactElement;
   }>
->(function Mod({ a, b }) {
-  return <Base gen={mod} args={[a, b]} />;
+>(function Mod({ a, b }, ref) {
+  return <Base ref={ref} gen={mod} args={[a, b]} />;
 });

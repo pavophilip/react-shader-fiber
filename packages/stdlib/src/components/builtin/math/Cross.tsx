@@ -9,6 +9,6 @@ export default forwardRef<
     a: Vec | ReactElement;
     b: Vec | ReactElement;
   }>
->(function Cross({ a, b }) {
-  return <Base gen={cross} args={[a, b]} />;
+>(function Cross({ a, b }, ref) {
+  return <Base ref={ref} gen={cross} args={[a, b]} />;
 });

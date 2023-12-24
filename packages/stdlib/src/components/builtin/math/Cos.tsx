@@ -8,6 +8,6 @@ export default forwardRef<
   PropsWithChildren<{
     of: Float | ReactElement;
   }>
->(function Cos({ of }) {
-  return <Base gen={cos} args={[of]} />;
+>(function Cos({ of }, ref) {
+  return <Base ref={ref} gen={cos} args={[of]} />;
 });

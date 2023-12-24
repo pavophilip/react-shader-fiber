@@ -9,6 +9,6 @@ export default forwardRef<
     a: Float | ReactElement;
     b: Float | ReactElement;
   }>
->(function Step({ a, b }) {
-  return <Base gen={step} args={[a, b]} />;
+>(function Step({ a, b }, ref) {
+  return <Base ref={ref} gen={step} args={[a, b]} />;
 });

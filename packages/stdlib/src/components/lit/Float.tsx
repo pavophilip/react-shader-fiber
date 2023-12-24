@@ -8,6 +8,6 @@ export default forwardRef<
   PropsWithChildren<{
     value: Float | ReactElement;
   }>
->(function Float({ value }) {
-  return <Base gen={float} args={[value]} />;
+>(function Float({ value }, ref) {
+  return <Base ref={ref} gen={float} args={[value]} />;
 });

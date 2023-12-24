@@ -11,6 +11,6 @@ export default forwardRef<
     a: Float | Int | UInt | ReactElement;
     b: Float | Int | UInt | ReactElement;
   }>
->(function Max({ a, b }) {
-  return <Base gen={max} args={[a, b]} />;
+>(function Max({ a, b }, ref) {
+  return <Base ref={ref} gen={max} args={[a, b]} />;
 });

@@ -21,12 +21,18 @@ const VecFnMap = {
 export default forwardRef<
   FC,
   PropsWithChildren<{
-    type: VecTypeEnum;
+    type?: VecTypeEnum;
     x?: ItemType;
     y?: ItemType;
     z?: ItemType;
     value?: Vec3;
   }>
->(function Vec3({ x, y, z, value, type = VecTypeEnum.vec }) {
-  return <Base gen={VecFnMap[type]} args={value || getVectorValue(x, y, z)} />;
+>(function Vec3({ x, y, z, value, type = VecTypeEnum.vec }, ref) {
+  return (
+    <Base
+      ref={ref}
+      gen={VecFnMap[type]}
+      args={value || getVectorValue(x, y, z)}
+    />
+  );
 });

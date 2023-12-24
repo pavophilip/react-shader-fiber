@@ -10,6 +10,6 @@ export default forwardRef<
     b: Float | ReactElement;
     x: Float | ReactElement;
   }>
->(function SmoothStep({ a, b, x }) {
-  return <Base gen={smoothstep} args={[a, b, x]} />;
+>(function SmoothStep({ a, b, x }, ref) {
+  return <Base ref={ref} gen={smoothstep} args={[a, b, x]} />;
 });

@@ -8,6 +8,6 @@ export default forwardRef<
   PropsWithChildren<{
     a: Float | ReactElement;
   }>
->(function Sqrt({ a }) {
-  return <Base gen={sqrt} args={[a]} />;
+>(function Sqrt({ a }, ref) {
+  return <Base ref={ref} gen={sqrt} args={[a]} />;
 });

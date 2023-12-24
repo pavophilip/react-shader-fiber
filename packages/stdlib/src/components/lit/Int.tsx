@@ -9,6 +9,6 @@ export default forwardRef<
   PropsWithChildren<{
     value: Int | ReactElement;
   }>
->(function Int({ value }) {
-  return <Base gen={int} args={[value]} />;
+>(function Int({ value }, ref) {
+  return <Base ref={ref} gen={int} args={[value]} />;
 });

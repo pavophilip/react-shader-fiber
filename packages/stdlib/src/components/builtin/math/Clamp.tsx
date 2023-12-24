@@ -12,6 +12,6 @@ export default forwardRef<
     min: Float | Int | UInt | ReactElement;
     max: Float | Int | UInt | ReactElement;
   }>
->(function Clamp({ x, min, max }) {
-  return <Base gen={clamp} args={[x, min, max]} />;
+>(function Clamp({ x, min, max }, ref) {
+  return <Base ref={ref} gen={clamp} args={[x, min, max]} />;
 });

@@ -9,6 +9,6 @@ export default forwardRef<
   PropsWithChildren<{
     value: Bool | ReactElement;
   }>
->(function Bool({ value }) {
-  return <Base gen={bool} args={[value]} />;
+>(function Bool({ value }, ref) {
+  return <Base ref={ref} gen={bool} args={[value]} />;
 });

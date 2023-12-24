@@ -26,6 +26,8 @@ export default forwardRef<
     y?: ItemType;
     value?: Vec2;
   }>
->(function Vec2({ x, y, value, type = VecTypeEnum.vec }) {
-  return <Base gen={VecFnMap[type]} args={value || getVectorValue(x, y)} />;
+>(function Vec2({ x, y, value, type = VecTypeEnum.vec }, ref) {
+  return (
+    <Base ref={ref} gen={VecFnMap[type]} args={value || getVectorValue(x, y)} />
+  );
 });

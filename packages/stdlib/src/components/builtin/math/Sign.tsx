@@ -8,6 +8,6 @@ export default forwardRef<
   PropsWithChildren<{
     a: Float | ReactElement;
   }>
->(function Sign({ a }) {
-  return <Base gen={sign} args={[a]} />;
+>(function Sign({ a }, ref) {
+  return <Base ref={ref} gen={sign} args={[a]} />;
 });

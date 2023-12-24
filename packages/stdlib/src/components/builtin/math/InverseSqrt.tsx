@@ -8,6 +8,6 @@ export default forwardRef<
   PropsWithChildren<{
     a: Float | ReactElement;
   }>
->(function InverseSqrt({ a }) {
-  return <Base gen={inversesqrt} args={[a]} />;
+>(function InverseSqrt({ a }, ref) {
+  return <Base ref={ref} gen={inversesqrt} args={[a]} />;
 });

@@ -8,6 +8,6 @@ export default forwardRef<
   PropsWithChildren<{
     a: Float | ReactElement;
   }>
->(function Fract({ a }) {
-  return <Base gen={fract} args={[a]} />;
+>(function Fract({ a }, ref) {
+  return <Base ref={ref} gen={fract} args={[a]} />;
 });

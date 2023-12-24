@@ -8,6 +8,6 @@ export default forwardRef<
   PropsWithChildren<{
     of: Float | ReactElement;
   }>
->(function Acos({ of }) {
-  return <Base gen={acos} args={[of]} />;
+>(function Acos({ of }, ref) {
+  return <Base ref={ref} gen={acos} args={[of]} />;
 });

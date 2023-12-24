@@ -8,6 +8,6 @@ export default forwardRef<
   PropsWithChildren<{
     of: Float | ReactElement;
   }>
->(function Tan({ of }) {
-  return <Base gen={tan} args={[of]} />;
+>(function Tan({ of }, ref) {
+  return <Base ref={ref} gen={tan} args={[of]} />;
 });
