@@ -9,7 +9,7 @@ import getVectorValue from "../../utils/getVectorValue.ts";
 
 type ItemType = Int | Float | Bool | ReactElement;
 
-export type Vec2 = [ItemType, ItemType];
+export type Vec4 = [ItemType, ItemType];
 
 const VecFnMap = {
   [VecTypeEnum.vec]: vec4,
@@ -21,12 +21,12 @@ const VecFnMap = {
 export default forwardRef<
   FC,
   PropsWithChildren<{
-    type: VecTypeEnum;
+    type?: VecTypeEnum;
     x?: ItemType;
     y?: ItemType;
     z?: ItemType;
     w?: ItemType;
-    value?: Vec2;
+    value?: Vec4;
   }>
 >(function Vec4({ x, y, z, w, value, type = VecTypeEnum.vec }) {
   return (
