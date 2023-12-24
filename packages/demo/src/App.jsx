@@ -1,5 +1,6 @@
 import Circle from "./examples/Circle.jsx";
-import { Box, Sheet } from "@mui/joy";
+import { Box } from "@mui/joy";
+import Gradient from "./examples/Gradient.jsx";
 
 function App() {
   return (
@@ -10,9 +11,7 @@ function App() {
       }}
     >
       <Circle />
-      <Circle />
-      <Circle />
-      <Circle />
+      <Gradient />
     </Box>
   );
 }
