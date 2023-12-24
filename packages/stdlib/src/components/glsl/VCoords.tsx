@@ -1,5 +1,5 @@
 import { FC, forwardRef, PropsWithChildren } from "react";
-import Input from "./Input.jsx";
+import Input from "../sym/Input.tsx";
 
 const VCoords = forwardRef<
   FC,

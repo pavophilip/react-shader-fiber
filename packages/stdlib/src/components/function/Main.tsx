@@ -1,6 +1,6 @@
 import { defMain } from "@thi.ng/shader-ast";
-import Base from "./Base";
-import normalizeChildren from "../../utils/normalizeChildren";
+import Base from "../glsl/Base.tsx";
+import normalizeChildren from "../../utils/normalizeChildren.ts";
 import { FC, ReactNode } from "react";
 
 interface MainProps {

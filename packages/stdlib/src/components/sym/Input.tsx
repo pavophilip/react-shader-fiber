@@ -1,6 +1,6 @@
 import { FC, forwardRef, PropsWithChildren } from "react";
 import { input, Type } from "@thi.ng/shader-ast";
-import Base from "./Base.jsx";
+import Base from "../glsl/Base.tsx";
 import { SymOpts } from "@thi.ng/shader-ast/api/syms";
 
 const Input = forwardRef<

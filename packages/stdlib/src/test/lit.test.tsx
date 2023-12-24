@@ -10,7 +10,7 @@ import {
   Vec3,
   Vec4,
   VecTypeEnum,
-} from "../components/lit";
+} from "../main.ts";
 
 test("Bool", () => {
   const ast = testRender(<Bool value={false} />);

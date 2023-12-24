@@ -1,6 +1,6 @@
 import { assign } from "@thi.ng/shader-ast";
 import { FC, forwardRef, PropsWithChildren, ReactNode, Ref } from "react";
-import Base from "./Base.tsx";
+import Base from "../glsl/Base.tsx";
 
 export default forwardRef<
   FC,

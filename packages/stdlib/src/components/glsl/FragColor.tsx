@@ -1,4 +1,4 @@
-import Output from "./Output.tsx";
+import Output from "../sym/Output.tsx";
 import { FC, forwardRef, PropsWithChildren } from "react";
 
 const FragColor = forwardRef<

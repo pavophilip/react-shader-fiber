@@ -1,4 +1,4 @@
-import Base from "./Base.jsx";
+import Base from "../glsl/Base.tsx";
 import { FC, forwardRef, PropsWithChildren } from "react";
 import { funcall } from "@thi.ng/shader-ast/ast/function";
 import { Type } from "@thi.ng/shader-ast";

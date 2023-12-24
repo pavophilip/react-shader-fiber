@@ -1,7 +1,7 @@
 import { testRender } from "@react-shader-fiber/renderer";
 import { expect, test } from "vitest";
 import { abs, acos, asin, float } from "@thi.ng/shader-ast";
-import { Abs, Acos, Asin } from "../components/builtin/math";
+import { Abs, Acos, Asin } from "../main.ts";
 
 test("Abs", () => {
   const ast = testRender(<Abs a={-0.5} />);

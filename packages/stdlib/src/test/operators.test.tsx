@@ -1,8 +1,17 @@
 import { expect, test } from "vitest";
 import { testRender } from "@react-shader-fiber/renderer";
-import { add, div, float, mul, sub } from "@thi.ng/shader-ast";
-import { Float } from "../components/lit";
-import { Add, Divide, Mul, Sub } from "../components/operators";
+import {
+  add,
+  assign,
+  div,
+  float,
+  mul,
+  output,
+  sub,
+  vec4,
+} from "@thi.ng/shader-ast";
+import { Float, Vec4 } from "../components/lit";
+import { Add, Assign, Divide, Mul, Output, Sub } from "../main.ts";
 
 test("Add", () => {
   const ast = testRender(
@@ -46,4 +55,14 @@ test("Divide", () => {
   );
 
   expect(ast[0]).toEqual(div(float(0.6), float(0.2)));
+});
+
+test("Assign", () => {
+  const ast = testRender(
+    <Assign to={<Output type={"vec4"} id={"fragColor"} />}>
+      <Vec4 x={0} y={0} z={1} w={1} />
+    </Assign>,
+  );
+
+  expect(ast[0]).toEqual(assign(output("vec4", "fragColor"), vec4(0, 0, 1, 1)));
 });

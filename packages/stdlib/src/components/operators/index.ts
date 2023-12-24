@@ -4,5 +4,6 @@ import Divide from "./Divide.tsx";
 import Increment from "./Increment.tsx";
 import Mul from "./Mul.tsx";
 import Sub from "./Sub.tsx";
+import Assign from "./Assign.tsx";
 
-export { Add, Decrement, Divide, Increment, Mul, Sub };
+export { Add, Decrement, Divide, Increment, Mul, Sub, Assign };
