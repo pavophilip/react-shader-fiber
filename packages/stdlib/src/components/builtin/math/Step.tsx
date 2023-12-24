@@ -2,13 +2,16 @@ import { FC, forwardRef, PropsWithChildren, ReactElement } from "react";
 import Base from "../../glsl/Base.tsx";
 import { step } from "@thi.ng/shader-ast";
 import { Float } from "../../lit/Float.tsx";
+import getFirstChild from "../../../utils/getFirstChild.ts";
 
 export default forwardRef<
   FC,
   PropsWithChildren<{
-    a: Float | ReactElement;
-    b: Float | ReactElement;
+    edge: Float | ReactElement;
+    x?: Float | ReactElement;
   }>
->(function Step({ a, b }, ref) {
-  return <Base ref={ref} gen={step} args={[a, b]} />;
+>(function Step({ edge, x, children }, ref) {
+  return (
+    <Base ref={ref} gen={step} args={[edge, getFirstChild(children) || x]} />
+  );
 });

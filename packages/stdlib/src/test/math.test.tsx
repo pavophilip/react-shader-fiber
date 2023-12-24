@@ -164,9 +164,15 @@ test("Floor", () => {
 });
 
 test("Fract", () => {
-  const ast = testRender(<Fract a={0.5} />);
+  const ast = testRender(<Fract of={0.5} />);
+  const ast2 = testRender(
+    <Fract>
+      <Float value={0.1} />
+    </Fract>,
+  );
 
   expect(ast[0]).toEqual(fract(float(0.5)));
+  expect(ast2[0]).toEqual(fract(float(0.1)));
 });
 
 test("InverseSqrt", () => {
@@ -248,7 +254,15 @@ test("Sin", () => {
 });
 
 test("Smoothstep", () => {
-  const ast = testRender(<SmoothStep a={0.5} b={0.8} x={0.6} />);
+  const ast = testRender(<SmoothStep from={0.5} to={0.8} x={0.6} />);
+
+  expect(ast).toEqual(
+    testRender(
+      <SmoothStep from={0.5} to={0.8}>
+        <Float value={0.6} />
+      </SmoothStep>,
+    ),
+  );
 
   expect(ast[0]).toEqual(smoothstep(float(0.5), float(0.8), float(0.6)));
 });
@@ -260,7 +274,15 @@ test("Sqrt", () => {
 });
 
 test("Step", () => {
-  const ast = testRender(<Step a={0.5} b={0.9} />);
+  const ast = testRender(<Step edge={0.5} x={0.9} />);
+
+  expect(ast).toEqual(
+    testRender(
+      <Step edge={0.5}>
+        <Float value={0.9} />
+      </Step>,
+    ),
+  );
 
   expect(ast[0]).toEqual(step(float(0.5), float(0.9)));
 });

@@ -23,8 +23,8 @@ const Gradient = () => {
       <Main>
         <Assign to={fragColorRef}>
           <Vec4
-            x={<Y of={vCoordsRef} />}
-            y={0.8}
+            x={0.9}
+            y={<Y of={vCoordsRef} />}
             z={<X of={vCoordsRef} />}
             w={1}
           />

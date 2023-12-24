@@ -15,7 +15,13 @@ import { Vec2, Vec3, Vec4, W, X, XY, XYZ, Y, Z } from "../main.ts";
 
 test("X", () => {
   const ast = testRender(<X of={<Vec2 x={0.2} y={0.1} />} />);
-
+  expect(ast).toEqual(
+    testRender(
+      <X>
+        <Vec2 x={0.2} y={0.1} />
+      </X>,
+    ),
+  );
   expect(ast[0]).toEqual($x(vec2(0.2, 0.1)));
 });
 

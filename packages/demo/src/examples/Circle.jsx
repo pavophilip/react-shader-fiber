@@ -29,7 +29,7 @@ const Circle = () => {
             z={
               <Call fn={"circle"} type={"float"}>
                 {vCoordsRef}
-                <Float value={0.5} />
+                <Float value={0.6} />
               </Call>
             }
             w={1}
