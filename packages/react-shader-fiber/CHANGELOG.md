@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/pavophilip/react-shader-fiber/compare/react-shader-fiber-v1.0.10...react-shader-fiber-v1.1.0) (2023-12-24)
+
+
+### Features
+
+* provide width and height of canvas ([a5be10e](https://github.com/pavophilip/react-shader-fiber/commit/a5be10ec3a1c44d33cf234adaedf39fe5bec92dd))
+
 ## [1.0.10](https://github.com/pavophilip/react-shader-fiber/compare/react-shader-fiber-v1.0.9...react-shader-fiber-v1.0.10) (2023-12-23)
 
 
