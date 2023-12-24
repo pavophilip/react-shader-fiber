@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.4](https://github.com/pavophilip/react-shader-fiber/compare/stdlib-v1.1.3...stdlib-v1.1.4) (2023-12-24)
+
+
+### Bug Fixes
+
+* use first child in swizzle, fract, step, smoothstep, ([c970a2f](https://github.com/pavophilip/react-shader-fiber/commit/c970a2fc1899c3431c44eb3752de5f628843190d))
+
 ## [1.1.3](https://github.com/pavophilip/react-shader-fiber/compare/stdlib-v1.1.2...stdlib-v1.1.3) (2023-12-24)
 
 
