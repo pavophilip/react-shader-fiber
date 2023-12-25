@@ -2,11 +2,13 @@ import { FragmentShader } from "react-shader-fiber";
 import circle from "../../lygia/draw/circle.glsl";
 import {
   Assign,
-  Call,
   Float,
   Input,
+  Length,
   Main,
   Output,
+  SmoothStep,
+  Sub,
   Vec4,
 } from "@react-shader-fiber/stdlib";
 import { useRef } from "react";
@@ -27,10 +29,24 @@ const Circle = () => {
             x={0}
             y={0}
             z={
-              <Call fn={"circle"} type={"float"}>
-                {vCoordsRef}
-                <Float value={0.6} />
-              </Call>
+              <SmoothStep from={0.3} to={0.3 + 0.001}>
+                <Length
+                  of={
+                    <Sub>
+                      {vCoordsRef}
+                      <Float value={0.5} />
+                    </Sub>
+                  }
+                />
+                <Length
+                  of={
+                    <Sub>
+                      {vCoordsRef}
+                      <Float value={0.5} />
+                    </Sub>
+                  }
+                />
+              </SmoothStep>
             }
             w={1}
           />

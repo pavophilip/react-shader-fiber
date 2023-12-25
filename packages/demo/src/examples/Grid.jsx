@@ -1,5 +1,6 @@
 import { FragmentShader } from "react-shader-fiber";
 import {
+  Add,
   Assign,
   Float,
   Fract,
@@ -18,7 +19,7 @@ import { useRef } from "react";
 const Gradient = () => {
   const fragColorRef = useRef();
   const vCoordsRef = useRef();
-  const timeRef = useRef();
+  const time = useRef();
 
   return (
     <FragmentShader>
@@ -26,7 +27,7 @@ const Gradient = () => {
 
       <Input ref={vCoordsRef} type={"vec2"} id={"vCoords"} />
 
-      <Uniform ref={timeRef} id={"u_time"} type={"float"} />
+      <Uniform ref={time} id={"u_time"} type={"float"} />
 
       <Main>
         <Assign to={fragColorRef}>
@@ -36,15 +37,15 @@ const Gradient = () => {
             z={
               <Step edge={0.5}>
                 <Fract>
-                  <X>
-                    <Mul>
-                      {vCoordsRef}
-                      <Mul>
-                        <Sin of={timeRef} />
-                        <Float value={10} />
-                      </Mul>
-                    </Mul>
-                  </X>
+                  <Mul>
+                    <X>
+                      <Add>
+                        {vCoordsRef}
+                        <Sin of={time} />
+                      </Add>
+                    </X>
+                    <Float value={2} />
+                  </Mul>
                 </Fract>
               </Step>
             }

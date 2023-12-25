@@ -3,9 +3,12 @@ import circle from "../../lygia/draw/circle.glsl";
 import stroke from "../../lygia/draw/stroke.glsl";
 import fbm from "../../lygia/generative/fbm.glsl";
 import {
+  Add,
   Assign,
+  Float,
   Input,
   Main,
+  Mul,
   Output,
   Uniform,
   Vec2,
@@ -39,11 +42,25 @@ const Mountain = () => {
               <Stroke
                 x={<Y of={st} />}
                 size={
-                  <FractalBrownianMotion
-                    vec={<Vec2 x={<X>{st}</X>} y={time} />}
-                  />
+                  <Mul>
+                    <FractalBrownianMotion>
+                      <Vec2
+                        x={
+                          <Add>
+                            <X>{st}</X>
+                            <Mul>
+                              {time}
+                              <Float value={0.1} />
+                            </Mul>
+                          </Add>
+                        }
+                        y={0.5}
+                      />
+                    </FractalBrownianMotion>
+                    <Float value={0.2} />
+                  </Mul>
                 }
-                width={0.2}
+                width={0.5}
               />
             }
             w={1.0}

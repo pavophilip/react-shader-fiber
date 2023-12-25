@@ -1,9 +1,9 @@
 import { Call } from "@react-shader-fiber/stdlib";
 
-const FractalBrownianMotion = ({ vec }) => {
+const FractalBrownianMotion = ({ children }) => {
   return (
     <Call fn={"fbm"} type={"float"}>
-      {vec}
+      {children}
     </Call>
   );
 };
