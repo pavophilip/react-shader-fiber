@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.5](https://github.com/pavophilip/react-shader-fiber/compare/stdlib-v1.1.4...stdlib-v1.1.5) (2023-12-26)
+
+
+### Bug Fixes
+
+* update package lock ([52dac61](https://github.com/pavophilip/react-shader-fiber/commit/52dac6112dc5eafebd1a14578536b6148e2a8c34))
+
 ## [1.1.4](https://github.com/pavophilip/react-shader-fiber/compare/stdlib-v1.1.3...stdlib-v1.1.4) (2023-12-24)
 
 
