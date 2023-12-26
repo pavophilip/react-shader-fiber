@@ -40,9 +40,9 @@ jobs:
           registry-url: https://registry.npmjs.org
       - run: npm ci -w @react-shader/renderer
       - run: npm run build -w @react-shader/renderer
-      - run: npm ci -w @react-shader-fiber/stdlib
-      - run: npm run build -w @react-shader-fiber/stdlib
-      - run: npm publish -w @react-shader-fiber/stdlib --access public
+      - run: npm ci -w @react-shader/stdlib
+      - run: npm run build -w @react-shader/stdlib
+      - run: npm publish -w @react-shader/stdlib --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
