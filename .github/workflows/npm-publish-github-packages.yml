@@ -20,9 +20,9 @@ jobs:
         with:
           node-version: 18
           registry-url: https://registry.npmjs.org
-      - run: npm ci -w @react-shader-fiber/renderer
-      - run: npm run build -w @react-shader-fiber/renderer
-      - run: npm publish -w @react-shader-fiber/renderer --access public
+      - run: npm ci -w @react-shader/renderer
+      - run: npm run build -w @react-shader/renderer
+      - run: npm publish -w @react-shader/renderer --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
@@ -38,8 +38,8 @@ jobs:
         with:
           node-version: 18
           registry-url: https://registry.npmjs.org
-      - run: npm ci -w @react-shader-fiber/renderer
-      - run: npm run build -w @react-shader-fiber/renderer
+      - run: npm ci -w @react-shader/renderer
+      - run: npm run build -w @react-shader/renderer
       - run: npm ci -w @react-shader-fiber/stdlib
       - run: npm run build -w @react-shader-fiber/stdlib
       - run: npm publish -w @react-shader-fiber/stdlib --access public
@@ -58,8 +58,8 @@ jobs:
         with:
           node-version: 18
           registry-url: https://registry.npmjs.org
-      - run: npm ci -w @react-shader-fiber/renderer
-      - run: npm run build -w @react-shader-fiber/renderer
+      - run: npm ci -w @react-shader/renderer
+      - run: npm run build -w @react-shader/renderer
       - run: npm ci -w react-shader-fiber
       - run: npm run build -w react-shader-fiber
       - run: npm publish -w react-shader-fiber --access public
