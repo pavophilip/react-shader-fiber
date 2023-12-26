@@ -1,13 +1,5 @@
-import { FragmentShader } from "react-shader-fiber";
-import {
-  Assign,
-  Input,
-  Main,
-  Output,
-  Vec4,
-  X,
-  Y,
-} from "@react-shader-fiber/stdlib";
+import { FragmentShader } from "@react-shader/fiber";
+import { Assign, Input, Main, Output, Vec4, X, Y } from "@react-shader/stdlib";
 import { useRef } from "react";
 
 const Gradient = () => {

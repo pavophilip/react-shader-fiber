@@ -47,7 +47,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
   publish-npm-rsf:
-    if: startsWith(github.event.release.name, 'react-shader-fiber')
+    if: startsWith(github.event.release.name, 'fiber')
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -60,8 +60,8 @@ jobs:
           registry-url: https://registry.npmjs.org
       - run: npm ci -w @react-shader/renderer
       - run: npm run build -w @react-shader/renderer
-      - run: npm ci -w react-shader-fiber
-      - run: npm run build -w react-shader-fiber
-      - run: npm publish -w react-shader-fiber --access public
+      - run: npm ci -w @react-shader/fiber
+      - run: npm run build -w @react-shader/fiber
+      - run: npm publish -w @react-shader/fiber --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

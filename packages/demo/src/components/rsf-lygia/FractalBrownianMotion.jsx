@@ -1,4 +1,4 @@
-import { Call } from "@react-shader-fiber/stdlib";
+import { Call } from "@react-shader/stdlib";
 
 const FractalBrownianMotion = ({ children }) => {
   return (

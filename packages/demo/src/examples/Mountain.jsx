@@ -1,4 +1,4 @@
-import { FragmentShader } from "react-shader-fiber";
+import { FragmentShader } from "@react-shader/fiber";
 import circle from "../../lygia/draw/circle.glsl";
 import stroke from "../../lygia/draw/stroke.glsl";
 import fbm from "../../lygia/generative/fbm.glsl";
@@ -15,7 +15,7 @@ import {
   Vec4,
   X,
   Y,
-} from "@react-shader-fiber/stdlib";
+} from "@react-shader/stdlib";
 import { useRef } from "react";
 import Stroke from "../components/rsf-lygia/Stroke.jsx";
 import FractalBrownianMotion from "../components/rsf-lygia/FractalBrownianMotion.jsx";

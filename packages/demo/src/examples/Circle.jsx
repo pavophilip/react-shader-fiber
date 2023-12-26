@@ -1,4 +1,4 @@
-import { FragmentShader } from "react-shader-fiber";
+import { FragmentShader } from "@react-shader/fiber";
 import circle from "../../lygia/draw/circle.glsl";
 import {
   Assign,
@@ -10,7 +10,7 @@ import {
   SmoothStep,
   Sub,
   Vec4,
-} from "@react-shader-fiber/stdlib";
+} from "@react-shader/stdlib";
 import { useRef } from "react";
 
 const Circle = () => {

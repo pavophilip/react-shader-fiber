@@ -1,4 +1,4 @@
-import { Call, Float } from "@react-shader-fiber/stdlib";
+import { Call, Float } from "@react-shader/stdlib";
 
 const Stroke = ({ x, size, width }) => {
   return (
