@@ -1,5 +1,5 @@
 {
-  "name": "@react-shader-fiber/stdlib",
+  "name": "@react-shader/stdlib",
   "private": false,
   "version": "1.1.4",
   "type": "module",
@@ -15,7 +15,7 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@react-shader-fiber/renderer": "^1.0.12",
+    "@react-shader/renderer": "^1.1.1",
     "@thi.ng/shader-ast": "^0.12.88",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
