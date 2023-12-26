@@ -1,5 +1,25 @@
 # Changelog
 
+## [2.0.0](https://github.com/pavophilip/react-shader-fiber/compare/renderer-v1.0.12...renderer-v2.0.0) (2023-12-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* package name ws changed from @react-shader-fiber/renderer to @react-shader/fiber
+* package name ws changed from @react-shader-fiber/renderer to @react-shader/fiber
+
+### Features
+
+* update package name ([c9339d1](https://github.com/pavophilip/react-shader-fiber/commit/c9339d121e941d3d784d45f227b47c553eafab16))
+* update package name ([c98c343](https://github.com/pavophilip/react-shader-fiber/commit/c98c343b8683cde4f23d92fec5f5f8881938cb4f))
+
+
+### Bug Fixes
+
+* readme ([a5ded0c](https://github.com/pavophilip/react-shader-fiber/commit/a5ded0c582396d36cf251eba715268a404747cb1))
+* update package name ([01b654e](https://github.com/pavophilip/react-shader-fiber/commit/01b654e34f893e46743297f7126053341de012a8))
+* update package name ([7d442be](https://github.com/pavophilip/react-shader-fiber/commit/7d442be505fdce89e8e4270be7def0c20d2ca1c3))
+
 ## [1.0.12](https://github.com/pavophilip/react-shader-fiber/compare/renderer-v1.0.11...renderer-v1.0.12) (2023-12-23)
 
 
