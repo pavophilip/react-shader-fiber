@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/pavophilip/react-shader-fiber/compare/renderer-v1.0.12...renderer-v1.1.0) (2023-12-26)
+
+
+### Features
+
+* update package name ([f0b7df9](https://github.com/pavophilip/react-shader-fiber/commit/f0b7df92ea4bd38928de7c7d89970aa31528a8b1))
+
 ## [1.0.12](https://github.com/pavophilip/react-shader-fiber/compare/renderer-v1.0.11...renderer-v1.0.12) (2023-12-23)
 
 
