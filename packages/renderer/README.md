@@ -1,3 +1,5 @@
 # React Shader Fiber Renderer
 
-Custom React Reconciler based on react-reconciler.
+Custom React Renderer based on react-reconciler.
+
+`npm i @react-shader/renderer`
