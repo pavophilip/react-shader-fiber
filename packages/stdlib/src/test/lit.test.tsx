@@ -1,6 +1,6 @@
 import { expect, test } from "vitest";
 import { bool, float, int, ivec3, uint, vec2, vec4 } from "@thi.ng/shader-ast";
-import { testRender } from "@react-shader-fiber/renderer";
+import { testRender } from "@react-shader/renderer";
 import {
   Bool,
   Float,

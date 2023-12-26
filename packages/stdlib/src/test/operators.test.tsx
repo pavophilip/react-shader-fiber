@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { testRender } from "@react-shader-fiber/renderer";
+import { testRender } from "@react-shader/renderer";
 import {
   add,
   assign,

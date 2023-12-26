@@ -7,7 +7,7 @@ import React, {
 import isFloat from "../../utils/isFloat.ts";
 import { float } from "@thi.ng/shader-ast";
 import normalizeChildren from "../../utils/normalizeChildren.ts";
-import { Ast } from "@react-shader-fiber/renderer";
+import { Ast } from "@react-shader/renderer";
 
 const useArgs = (args: any[], children: ReactNode) => {
   const argsChildren = args

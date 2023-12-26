@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import { GLSLVersion, targetGLSL } from "@thi.ng/shader-ast-glsl";
 import { useCloturPlayer } from "@clotur/player";
 import FragmentShaderProvider from "../providers/FragmentShaderProvider.jsx";
-import { render } from "@react-shader-fiber/renderer";
+import { render } from "@react-shader/renderer";
 
 const VS = `# version 300 es
 in vec4 aVertexPosition;

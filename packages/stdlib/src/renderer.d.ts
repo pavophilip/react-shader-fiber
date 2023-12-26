@@ -1,1 +1,1 @@
-declare module "@react-shader-fiber/renderer";
+declare module "@react-shader/renderer";

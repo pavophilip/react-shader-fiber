@@ -1,7 +1,7 @@
 import { expect, test } from "vitest";
-import { testRender } from "@react-shader-fiber/renderer";
+import { testRender } from "@react-shader/renderer";
 import { float, input, output, sym, uniform } from "@thi.ng/shader-ast";
-import { Input, Output, Sym, Float, Uniform } from "../main.ts";
+import { Float, Input, Output, Sym, Uniform } from "../main.ts";
 
 test("Uniform", () => {
   const ast = testRender(<Uniform type={"float"} id={"u_time"} />);

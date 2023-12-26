@@ -1,4 +1,4 @@
-import { testRender } from "@react-shader-fiber/renderer";
+import { testRender } from "@react-shader/renderer";
 import { expect, test } from "vitest";
 import { Assign, Call, Main, Output, Vec4 } from "../main.ts";
 import { funcall } from "@thi.ng/shader-ast/ast/function";

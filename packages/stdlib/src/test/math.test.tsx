@@ -1,4 +1,4 @@
-import { testRender } from "@react-shader-fiber/renderer";
+import { testRender } from "@react-shader/renderer";
 import { expect, test } from "vitest";
 import {
   abs,

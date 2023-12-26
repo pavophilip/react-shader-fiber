@@ -1,4 +1,4 @@
-import RSF from "@react-shader-fiber/renderer";
+import RSF from "@react-shader/renderer";
 import { expect, test } from "vitest";
 import { float, input, program } from "@thi.ng/shader-ast";
 import { funcall } from "@thi.ng/shader-ast/ast/function";
