@@ -1,5 +1,5 @@
 {
-  "name": "@react-shader-fiber/renderer",
+  "name": "@react-shader/renderer",
   "private": false,
   "version": "1.0.12",
   "type": "module",
