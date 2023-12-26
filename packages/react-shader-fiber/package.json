@@ -1,5 +1,5 @@
 {
-  "name": "react-shader-fiber",
+  "name": "@react-shader/fiber",
   "private": false,
   "version": "1.1.0",
   "type": "module",
