@@ -75,7 +75,7 @@ const MyComponent = () => {
 
 ## Demos
 
-See more demos [here](packages/demo/README.md)
+See more demos [here](packages/demo)
 
 ## Features
 
