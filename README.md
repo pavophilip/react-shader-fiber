@@ -48,7 +48,7 @@ const MyComponent = () => {
     const time = useRef();
 
     return (
-        <FragmentShader prelude={[circle, stroke, fbm]} width={600} height={600}>
+        <FragmentShader width={600} height={600}>
             <Output type={"vec4"} id={"fragColor"} ref={color}/>
 
             <Input
