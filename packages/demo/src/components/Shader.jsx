@@ -5,17 +5,22 @@ import { Assign, Input, Main, Output, Uniform } from "@react-shader/stdlib";
 import { FragmentShader } from "@react-shader/fiber";
 import ShaderProvider from "../providers/ShaderProvider.jsx";
 import { useRef } from "react";
+import { mergeRefs } from "react-merge-refs";
 
-const Shader = ({ coords, children }) => {
+const Shader = ({ coords: providedCoords, children }) => {
   const color = useRef();
-  // const coords = useRef();
+  const coords = useRef();
   const time = useRef();
 
   return (
     <FragmentShader prelude={[circle, stroke, fbm]} width={600} height={600}>
       <Output type={"vec4"} id={"fragColor"} ref={color} />
 
-      <Input ref={coords} type={"vec2"} id={"vCoords"} />
+      <Input
+        ref={mergeRefs([coords, providedCoords])}
+        type={"vec2"}
+        id={"vCoords"}
+      />
 
       <Uniform ref={time} id={"u_time"} type={"float"} />
 
