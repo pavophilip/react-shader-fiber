@@ -1,6 +1,6 @@
 import renderer from "react-test-renderer";
 import { test } from "vitest";
-import { FragmentShader } from "../src/main.js";
+import { FragmentShader } from "../src/main.ts";
 import { Assign, Main, Output, Vec4 } from "@react-shader/stdlib";
 import { createRef } from "react";
 

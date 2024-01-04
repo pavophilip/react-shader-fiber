@@ -1,6 +1,6 @@
 import { GLSLVersion, targetGLSL } from "@thi.ng/shader-ast-glsl";
 
-const toGLSL = (prelude) =>
+const toGLSL = (prelude: string | string[]) =>
   targetGLSL({
     version: GLSLVersion.GLES_300,
     versionPragma: true,

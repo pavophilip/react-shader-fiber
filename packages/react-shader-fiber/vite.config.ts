@@ -1,12 +1,15 @@
+// @ts-expect-error path import
 import { resolve } from "path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   build: {
     lib: {
-      entry: resolve(__dirname, "src/main.js"),
+      // @ts-expect-error cwd
+      entry: resolve(__dirname, "src/main.ts"),
       name: "RSF",
       fileName: "rsf",
     },
