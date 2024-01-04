@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.7](https://github.com/pavophilip/react-shader-fiber/compare/stdlib-v1.1.6...stdlib-v1.1.7) (2024-01-04)
+
+
+### Bug Fixes
+
+* Engines list added to package.json to specify compatibility with Node v18 or above. ([51082e0](https://github.com/pavophilip/react-shader-fiber/commit/51082e0540323a782c9de3d110f2af51032ec2cb))
+* generate d.ts files ([0ee2ee5](https://github.com/pavophilip/react-shader-fiber/commit/0ee2ee50ac4605cf4cad4963ddc0293cf73a8e1f))
+
 ## [1.1.6](https://github.com/pavophilip/react-shader-fiber/compare/stdlib-v1.1.5...stdlib-v1.1.6) (2023-12-26)
 
 

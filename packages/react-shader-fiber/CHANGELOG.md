@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.2.1](https://github.com/pavophilip/react-shader-fiber/compare/fiber-v1.2.0...fiber-v1.2.1) (2024-01-04)
+
+
+### Bug Fixes
+
+* generate d.ts files, refactor, add high level components: Color, Shader, Player ([cf7ea5f](https://github.com/pavophilip/react-shader-fiber/commit/cf7ea5f9ab1809636674b56a01bf5be883a879be))
+* Refactor react-shader-fiber to TypeScript and add new components ([8923132](https://github.com/pavophilip/react-shader-fiber/commit/892313262163263f11851978f596422cccce5b21))
+* remove unnecessary tests, refactor. Export useRenderShader, toGLSL for external usage. ([fceb118](https://github.com/pavophilip/react-shader-fiber/commit/fceb118a978ee157763a47251a5ac59cbf1786c4))
+
 ## [1.2.0](https://github.com/pavophilip/react-shader-fiber/compare/fiber-v1.1.1...fiber-v1.2.0) (2023-12-26)
 
 

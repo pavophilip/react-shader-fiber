@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/pavophilip/react-shader-fiber/compare/renderer-v1.1.1...renderer-v1.1.2) (2024-01-04)
+
+
+### Bug Fixes
+
+* Engines list added to package.json to specify compatibility with Node v18 or above. Also optimized function 'onUpdate' in Program.js by reusing 'this.ast' variable. ([8668863](https://github.com/pavophilip/react-shader-fiber/commit/866886396c33400eae746311ca50f8321e92ed03))
+
 ## [1.1.1](https://github.com/pavophilip/react-shader-fiber/compare/renderer-v1.1.0...renderer-v1.1.1) (2023-12-26)
 
 
