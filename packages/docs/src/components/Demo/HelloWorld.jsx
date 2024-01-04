@@ -1,10 +1,10 @@
-import { Player, Shader, Vec4 } from "@react-shader/fiber";
+import { Color, Player, Shader } from "@react-shader/fiber";
 
 const HelloWorld = () => {
   return (
-    <Player>
+    <Player width={360} height={360}>
       <Shader>
-        <Vec4 x={1} y={0} z={0} w={1} />
+        <Color hex={"#ff0000"} />
       </Shader>
     </Player>
   );
