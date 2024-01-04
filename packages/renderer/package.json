@@ -27,6 +27,9 @@
     "type": "git",
     "url": "git+https://github.com/pavophilip/react-shader-fiber.git#main"
   },
+  "engines": {
+    "node": ">=18"
+  },
   "keywords": [
     "react",
     "renderer",

@@ -12,7 +12,7 @@ class Program extends BaseElement {
     this.gen = program;
     this.onUpdate = (ast) => {
       this.ast = this.gen(ast);
-      props.onUpdate && props.onUpdate(this.gen(ast));
+      props.onUpdate && props.onUpdate(this.ast);
     };
   }
 
