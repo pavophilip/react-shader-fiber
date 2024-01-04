@@ -1,2 +1,5 @@
 import FragmentShader from "./components/FragmentShader.jsx";
-export { FragmentShader };
+import useRenderShader from "./hooks/useRenderShader.jsx";
+import toGLSL from "./utils/toGLSL.js";
+
+export { FragmentShader, useRenderShader, toGLSL };

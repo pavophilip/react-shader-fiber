@@ -1,8 +1,7 @@
-import { useMemo } from "react";
-import { GLSLVersion, targetGLSL } from "@thi.ng/shader-ast-glsl";
+import { forwardRef, useMemo } from "react";
 import { useCloturPlayer } from "@clotur/player";
-import FragmentShaderProvider from "../providers/FragmentShaderProvider.jsx";
-import { render } from "@react-shader/renderer";
+import useRenderShader from "../hooks/useRenderShader.jsx";
+import toGLSL from "../utils/toGLSL.js";
 
 const VS = `# version 300 es
 in vec4 aVertexPosition;
@@ -16,50 +15,34 @@ void main() {
     vCoords = (aVertexPosition.xy + 1.0) / 2.0;
 }`;
 
-const glsl = (prelude) =>
-  targetGLSL({
-    version: GLSLVersion.GLES_300,
-    versionPragma: true,
-    type: "fs",
-    prelude: `precision mediump float; \n${prelude}`,
-  });
+const FragmentShader = forwardRef(
+  ({ prelude = "", width = 256, height = 256, children }, ref) => {
+    const preludeStr = Array.isArray(prelude) ? prelude.join(`\n`) : prelude;
 
-const useRenderShader = (el) => {
-  return useMemo(
-    () => render(<FragmentShaderProvider>{el}</FragmentShaderProvider>),
-    [el],
-  );
-};
+    const tree = useRenderShader(children);
 
-const FragmentShader = ({
-  prelude = "",
-  width = 256,
-  height = 256,
-  children,
-}) => {
-  const preludeStr = Array.isArray(prelude) ? prelude.join(`\n`) : prelude;
+    ref && ref(tree);
 
-  const tree = useRenderShader(children);
+    const params = useMemo(() => {
+      return {
+        vs: VS,
+        fs: tree && toGLSL(preludeStr)(tree),
+        uniforms: {},
+      };
+    }, [preludeStr, tree]);
 
-  const params = useMemo(() => {
-    return {
-      vs: VS,
-      fs: tree && glsl(preludeStr)(tree),
-      uniforms: {},
-    };
-  }, [preludeStr, tree]);
+    const player = useCloturPlayer(params);
 
-  const player = useCloturPlayer(params);
-
-  return (
-    <div
-      {...player}
-      style={{
-        width,
-        height,
-      }}
-    />
-  );
-};
+    return (
+      <div
+        {...player}
+        style={{
+          width,
+          height,
+        }}
+      />
+    );
+  },
+);
 
 export default FragmentShader;
