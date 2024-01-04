@@ -27,17 +27,21 @@ yarn add @react-shader/fiber
 Simple Hello World Shader
 
 ```jsx
+import {Color, Player, Shader} from "@react-shader/fiber";
 
-
-const MyComponent = () => {
+const HelloWorld = () => {
   return (
-          <Player width={360} height={360}>
-            <Shader>
-              <Color hex={'#ff0000'}/>
-            </Shader>
-          </Player>
+      // You can specify size of your canvas
+      <Player width={300} height={300}>
+          <Shader>
+              {/* Child of Shader component (color) will be assigned to the result */}
+              <Color hex={"#ff0000"}/>
+          </Shader>
+      </Player>
   );
 };
+
+export default HelloWorld;
 ```
 
 ## Demos
