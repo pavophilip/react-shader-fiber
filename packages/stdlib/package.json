@@ -14,6 +14,9 @@
     "preview": "vite preview",
     "test": "vitest"
   },
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
     "@react-shader/renderer": "^1.1.1",
     "@thi.ng/shader-ast": "^0.12.88",
