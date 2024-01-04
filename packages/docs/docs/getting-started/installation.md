@@ -13,11 +13,11 @@ sidebar_position: 1
 Install packages using npm:
 
 ```bash
-npm i @react-shader/fiber @react-shader/stdlib
+npm i @react-shader/fiber
 ```
 
 Or with yarn:
 
 ```bash
-yarn add @react-shader/fiber @react-shader/stdlib
+yarn add @react-shader/fiber
 ```
