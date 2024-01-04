@@ -7,6 +7,7 @@
     "dist"
   ],
   "main": "./dist/rsf.js",
+  "types": "./dist/main.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -21,7 +22,8 @@
     "@react-shader/renderer": "^1.1.1",
     "@react-shader/stdlib": "^1.1.6",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "vite-plugin-dts": "^3.7.0"
   },
   "devDependencies": {
     "@thi.ng/shader-ast-glsl": "^0.4.88",
