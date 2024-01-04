@@ -43,22 +43,12 @@ import {FragmentShader} from "@react-shader/fiber";
 import {useRef} from "react";
 
 const MyComponent = () => {
-    const color = useRef();
-    const coords = useRef();
-    const time = useRef();
+    const color = <Output type={"vec4"} id={"fragColor"} ref={color}/>;
+    const coords = <Input ref={coords} type={"vec2"} id={"vCoords"}/>;
+    const time = <Uniform ref={time} id={"u_time"} type={"float"}/>;
 
     return (
         <FragmentShader width={600} height={600}>
-            <Output type={"vec4"} id={"fragColor"} ref={color}/>
-
-            <Input
-                ref={coords}
-                type={"vec2"}
-                id={"vCoords"}
-            />
-
-            <Uniform ref={time} id={"u_time"} type={"float"}/>
-
             <Main>
                 <Assign to={color}>
                     <Mix
@@ -80,7 +70,7 @@ See more demos [here](packages/demo)
 ## Features
 
 - [x]  WebGL support
-- [x]  Provide props as a components and refs
+- [x]  Provide components as a props
 - [x]  Built-in functions and expressions
 - [x]  Call custom functions
 - [ ]  WebGPU support

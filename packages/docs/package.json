@@ -1,5 +1,5 @@
 {
-  "name": "docs",
+  "name": "@react-shader/docs",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -17,8 +17,11 @@
     "@docusaurus/core": "3.0.1",
     "@docusaurus/preset-classic": "3.0.1",
     "@mdx-js/react": "^3.0.0",
+    "@react-shader/fiber": "^1.2.0",
+    "@react-shader/stdlib": "^1.1.6",
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.3.0",
+    "raw-loader": "^4.0.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },

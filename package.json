@@ -3,11 +3,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "bump-renderer-version": "npm i @react-shader/renderer@latest --workspace=react-shader-fiber --workspace=@react-shader-fiber/stdlib --workspace=@react-shader-fiber/demo"
+    "bump-renderer-version": "npm i @react-shader/renderer@latest --workspace=react-shader-fiber --workspace=@react-shader-fiber/stdlib --workspace=@react-shader-fiber/demo",
+    "rebuild-libs": "npm run build -w @react-shader/renderer && npm i @react-shader/renderer -w @react-shader/fiber && npm run build -w @react-shader/fiber && npm i @react-shader/fiber -w @react-shader/demo"
   },
   "license": "MIT",
   "author": "Philip Pavo",
   "workspaces": [
+    "./packages/docs",
     "./packages/demo",
     "./packages/renderer",
     "./packages/stdlib",

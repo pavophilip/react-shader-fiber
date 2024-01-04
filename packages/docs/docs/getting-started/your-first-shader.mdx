@@ -1,0 +1,30 @@
+---
+title: "Your First Shader"
+sidebar_position: 2
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import HelloWorldRaw from '!!raw-loader!@site/src/components/Demo/HelloWorld';
+import HelloWorld from '@site/src/components/Demo/HelloWorld';
+import GLSLOutput from '@site/src/components/GLSLOutput';
+import CodeBlock from '@theme/CodeBlock';
+
+In the world of shaders programming, the equivalent of a "Hello, World!" application is typically a simple solid color display.
+
+Let's display solid red color:
+
+<Tabs>
+  <TabItem value="rsf" label="React Shader Fiber" default>
+    <CodeBlock language={'jsx'}>
+        {HelloWorldRaw}
+    </CodeBlock>
+  </TabItem>
+  <TabItem value="GLSL" label="GLSL">
+  <CodeBlock language={'glsl'}>
+    <GLSLOutput component={HelloWorld}/>
+  </CodeBlock>
+  </TabItem>
+</Tabs>
+
+<HelloWorld/>

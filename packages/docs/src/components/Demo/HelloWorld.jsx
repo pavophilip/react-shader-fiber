@@ -1,7 +1,7 @@
 import { FragmentShader } from "@react-shader/fiber";
 import { Assign, Main, Output, Vec4 } from "@react-shader/stdlib";
 
-const MyAwesomeShader = () => {
+const HelloWorld = () => {
   const color = <Output type={"vec4"} id={"fragColor"} />;
 
   return (
@@ -16,4 +16,4 @@ const MyAwesomeShader = () => {
   );
 };
 
-export default MyAwesomeShader;
+export default HelloWorld;
