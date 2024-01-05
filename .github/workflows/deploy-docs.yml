@@ -24,8 +24,8 @@ jobs:
 
       - run: npm ci -w @react-shader/renderer
       - run: npm run build -w @react-shader/renderer
-      - run: npm ci -w @react-shader/stdlib.md
-      - run: npm run build -w @react-shader/stdlib.md
+      - run: npm ci -w @react-shader/stdlib
+      - run: npm run build -w @react-shader/stdlib
       - run: npm ci -w @react-shader/fiber
       - run: npm run build -w @react-shader/fiber
 
