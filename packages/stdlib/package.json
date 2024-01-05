@@ -19,7 +19,7 @@
     "node": ">=18"
   },
   "dependencies": {
-    "@react-shader/renderer": "^1.1.1",
+    "@react-shader/renderer": "^1.1.2",
     "@thi.ng/shader-ast": "^0.12.88",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
