@@ -43,12 +43,3 @@ graph TD
     AST -->|or to| WGPU
 		GLSL_CODE[Custom GLSL Code] --> GLSL
 ```
-
-Here is the structure of main React Shader Fiber packages:
-
-```mermaid
-graph TD
-  stdlib[@react-shader/stdlib] --> fiber[@react-shader/fiber] --> renderer[@react-shader/renderer]
-	your[Your Components] --> fiber
-	stdlib --> your
-```

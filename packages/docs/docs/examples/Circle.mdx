@@ -1,0 +1,21 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import CircleRaw from '!!raw-loader!@site/src/components/Demo/Circle';
+import Circle from '@site/src/components/Demo/Circle';
+import GLSLOutput from '@site/src/components/GLSLOutput';
+import CodeBlock from '@theme/CodeBlock';
+
+<Tabs>
+  <TabItem value="rsf" label="React Shader Fiber" default>
+    <CodeBlock language={'jsx'}>
+        {CircleRaw}
+    </CodeBlock>
+  </TabItem>
+  <TabItem value="GLSL" label="GLSL">
+  <CodeBlock language={'glsl'}>
+    <GLSLOutput component={Circle}/>
+  </CodeBlock>
+  </TabItem>
+</Tabs>
+
+<Circle/>

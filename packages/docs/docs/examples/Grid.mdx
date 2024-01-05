@@ -1,0 +1,21 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import GridRaw from '!!raw-loader!@site/src/components/Demo/Grid';
+import Grid from '@site/src/components/Demo/Grid';
+import GLSLOutput from '@site/src/components/GLSLOutput';
+import CodeBlock from '@theme/CodeBlock';
+
+<Tabs>
+  <TabItem value="rsf" label="React Shader Fiber" default>
+    <CodeBlock language={'jsx'}>
+        {GridRaw}
+    </CodeBlock>
+  </TabItem>
+  <TabItem value="GLSL" label="GLSL">
+  <CodeBlock language={'glsl'}>
+    <GLSLOutput component={Grid}/>
+  </CodeBlock>
+  </TabItem>
+</Tabs>
+
+<Grid/>

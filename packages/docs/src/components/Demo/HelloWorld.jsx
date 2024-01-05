@@ -6,7 +6,7 @@ const HelloWorld = () => {
     <Player width={300} height={300}>
       <Shader>
         {/* Child of Shader component (color) will be assigned to the result */}
-        <Color hex={"#ff0000"} />
+        <Color hex={"#ff055c"} />
       </Shader>
     </Player>
   );
