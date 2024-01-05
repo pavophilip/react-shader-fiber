@@ -21,6 +21,14 @@ jobs:
 
       - name: Install dependencies
         run: npm ci -w @react-shader/docs
+
+      - run: npm ci -w @react-shader/renderer
+      - run: npm run build -w @react-shader/renderer
+      - run: npm ci -w @react-shader/stdlib.md
+      - run: npm run build -w @react-shader/stdlib.md
+      - run: npm ci -w @react-shader/fiber
+      - run: npm run build -w @react-shader/fiber
+
       - name: Build website
         run: npm run build -w @react-shader/docs
 
