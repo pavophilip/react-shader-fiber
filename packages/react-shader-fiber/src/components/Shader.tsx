@@ -1,6 +1,6 @@
-import { Assign, Input, Main, Output, Uniform } from "@react-shader/stdlib";
 import ShaderProvider from "../providers/ShaderProvider.tsx";
 import { FC, PropsWithChildren } from "react";
+import { Assign, Input, Main, Output, Uniform } from "@react-shader/stdlib";
 
 const Shader: FC<
   PropsWithChildren<{

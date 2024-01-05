@@ -1,7 +1,7 @@
-import { Vec4 } from "@react-shader/stdlib";
 import { FC, useMemo } from "react";
 import normalizeColor from "../utils/normalizeColor.ts";
 import hexToRgb from "../utils/hexToRgb.ts";
+import { Vec4 } from "@react-shader/stdlib";
 
 type HexColorProps = {
   hex: string;
