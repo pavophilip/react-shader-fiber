@@ -10,6 +10,8 @@ React Shader Fiber is designed to make shader programming easier and more fun. I
 of modern frontend frameworks like React with shader programming. This makes advanced visual effects and graphics
 available to more developers.
 
+See [Documentation and examples](https://pavophilip.github.io/react-shader-fiber)
+
 ## Installation
 
 ```bash
@@ -43,10 +45,6 @@ const HelloWorld = () => {
 
 export default HelloWorld;
 ```
-
-## Demos
-
-See more demos [here](packages/demo)
 
 ## Features
 
