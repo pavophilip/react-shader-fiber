@@ -1,21 +1,28 @@
-import { Tabs} from 'nextra/components'
+import {Tabs} from 'nextra/components'
+import DemoContainer from "../../src/components/DemoContainer/DemoContainer";
+import DemoGrid from "../../src/components/Demo/DemoGrid";
 
-import DemoGrid from '/src/components/Demo/DemoGrid';
-import DemoContainer from '/src/components/DemoContainer/DemoContainer';
 
 <DemoContainer>
     <DemoGrid/>
 </DemoContainer>
 
-<Tabs items={['DemoGrid', 'Grid', 'Gradient']}>
+<Tabs items={['DemoGrid', 'Grid', 'Circle', 'Gradient']}>
     <Tabs.Tab>
         ```jsx filename="DemoGrid.jsx" file=<rootDir>/src/components/Demo/DemoGrid.jsx
         ```
     </Tabs.Tab>
 
-     <Tabs.Tab>
+    <Tabs.Tab>
         ```jsx filename="Grid.jsx" file=<rootDir>/src/components/Demo/Grid.jsx
         ```
+    </Tabs.Tab>
+
+    <Tabs.Tab>
+        ```jsx filename="Circle.jsx" file=
+        <rootDir>/src/components/Demo/Circle.jsx
+
+            ```
     </Tabs.Tab>
 
      <Tabs.Tab>

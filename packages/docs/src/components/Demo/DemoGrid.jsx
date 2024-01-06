@@ -7,7 +7,7 @@ import Circle from "./Circle";
 const DemoGrid = () => {
   const { radius, size } = useControls({
     radius: {
-      value: 0.5,
+      value: 0.4,
       min: 0,
       max: 1,
     },
