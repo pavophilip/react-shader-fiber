@@ -1,0 +1,28 @@
+---
+title: "Your First Shader"
+sidebar_position: 2
+---
+
+import { Tabs} from 'nextra/components'
+import HelloWorldRaw from '!!raw-loader!/src/components/Demo/HelloWorld';
+import HelloWorld from '/src/components/Demo/HelloWorld';
+import GLSLOutput from '/src/components/GLSLOutput';
+
+In the world of shaders programming, the equivalent of a "Hello, World!" application is typically a simple solid color display.
+
+Let's fill the canvas with solid red color:
+
+<Tabs items={['React Shader Fiber']}>
+  <Tabs.Tab>
+    ```jsx file=<rootDir>/src/components/Demo/HelloWorld.jsx
+    ```
+  </Tabs.Tab>
+</Tabs>
+
+<HelloWorld/>
+<br/>
+
+In the example above, we used the following components:
+- The Player is a component that creates a canvas and draws a WebGL shader on it.
+- The Shader component is the main container for your shader. It should contain a color or any component that represents a color, such as **Vec4** or a custom component that returns a color.
+- Color is a wrapper around the native **Vec4** component that adds syntax sugar to represent colors in hex format. It can also accept the props `r`, `g`, `b`, `a` to set colors by providing RGBA values.

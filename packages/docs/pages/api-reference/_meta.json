@@ -1,0 +1,5 @@
+{
+  "stdlib": "@react-shader/stdlib",
+  "fiber": "@react-shader/fiber",
+  "renderer": "@react-shader/renderer"
+}
