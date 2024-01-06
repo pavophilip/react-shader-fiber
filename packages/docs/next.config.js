@@ -5,6 +5,9 @@ const withNextra = require("nextra")({
 
 module.exports = withNextra({
   output: "export",
+
+  basePath: "/react-shader-fiber",
+
   images: {
     unoptimized: true,
   },
