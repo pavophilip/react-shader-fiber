@@ -20,15 +20,12 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm ci -w @react-shader/docs
+        run: npm ci
 
-      - run: npm ci -w @react-shader/renderer
       - run: npm run build -w @react-shader/renderer
 
-      - run: npm ci -w @react-shader/stdlib
       - run: npm run build -w @react-shader/stdlib
 
-      - run: npm ci -w @react-shader/fiber
       - run: npm run build -w @react-shader/fiber
 
       - name: Build website
