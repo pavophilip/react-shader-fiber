@@ -1,7 +1,11 @@
 import { Tabs} from 'nextra/components'
 
 import DemoGrid from '/src/components/Demo/DemoGrid';
-import DemoContainer from '/src/components/Demo/DemoContainer';
+import DemoContainer from '/src/components/DemoContainer/DemoContainer';
+
+<DemoContainer>
+    <DemoGrid/>
+</DemoContainer>
 
 <Tabs items={['DemoGrid', 'Grid', 'Gradient']}>
     <Tabs.Tab>
@@ -19,7 +23,3 @@ import DemoContainer from '/src/components/Demo/DemoContainer';
         ```
     </Tabs.Tab>
 </Tabs>
-
-<DemoContainer>
-    <DemoGrid/>
-</DemoContainer>
