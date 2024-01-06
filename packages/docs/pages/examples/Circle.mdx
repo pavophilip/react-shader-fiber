@@ -1,5 +1,6 @@
 import { Tabs} from 'nextra/components'
 
+import DemoContainer from '/src/components/Demo/DemoContainer';
 import DemoCircle from '/src/components/Demo/DemoCircle';
 
 <Tabs items={['DemoCircle', 'Circle']}>
@@ -13,5 +14,6 @@ import DemoCircle from '/src/components/Demo/DemoCircle';
         ```
     </Tabs.Tab>
 </Tabs>
-
-<DemoCircle/>
+<DemoContainer>
+    <DemoCircle/>
+</DemoContainer>

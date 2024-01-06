@@ -10,6 +10,7 @@
   "dependencies": {
     "@react-shader/fiber": "^1.2.3",
     "indent.js": "^0.3.5",
+    "leva": "^0.9.35",
     "next": "^14.0.4",
     "nextra": "^2.13.2",
     "nextra-theme-docs": "^2.13.2",

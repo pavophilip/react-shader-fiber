@@ -1,11 +1,14 @@
 import {
+  Call,
   Float,
   Fract,
   Length,
   Mix,
+  Mul,
   SmoothStep,
   Sub,
   useCoords,
+  Vec2,
   Vec4,
 } from "@react-shader/fiber";
 
@@ -18,11 +21,43 @@ const Circle = ({ radius, children }) => {
       b={children}
       c={
         <SmoothStep
-          from={radius}
+          from={<Float value={radius} />}
           to={
             <Sub>
               {radius}
-              <Float value={0.001} />
+              <Mul>
+                <Float value={0.7} />
+                <Length
+                  of={
+                    <Vec2
+                      x={
+                        <Call fn={"dFdx"} type={"float"}>
+                          <Length
+                            of={
+                              <Sub>
+                                {<Fract of={coords} />}
+                                <Float value={0.5} />
+                              </Sub>
+                            }
+                          />
+                        </Call>
+                      }
+                      y={
+                        <Call fn={"dFdy"} type={"float"}>
+                          <Length
+                            of={
+                              <Sub>
+                                {<Fract of={coords} />}
+                                <Float value={0.5} />
+                              </Sub>
+                            }
+                          />
+                        </Call>
+                      }
+                    />
+                  }
+                />
+              </Mul>
             </Sub>
           }
         >
