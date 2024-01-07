@@ -3,14 +3,15 @@
 This is an experimental custom React Renderer, designed to compose Fragment Shaders using a declarative way.
 
 > [!WARNING]
-> Just a heads-up: our library is like a fun, evolving playground – it's under active development and can be unstable.
-> Happy creating and thanks for being part of our journey!
+> 🚧 Library is under active development and can be unstable.
 
 > [!TIP]
 > Spot something odd? Let us know by [creating an issue](https://github.com/pavophilip/react-shader-fiber/issues/new)!
 >
 > Got cool ideas or fixes? We'd love to see
 > your [pull requests](https://github.com/pavophilip/react-shader-fiber/pulls). Join us in shaping this library!
+> Happy creating and thanks for being part of our journey!
+>
 
 ## Why?
 
