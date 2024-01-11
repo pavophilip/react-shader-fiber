@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.9](https://github.com/pavophilip/react-shader-fiber/compare/fiber-v1.2.8...fiber-v1.2.9) (2024-01-11)
+
+
+### Bug Fixes
+
+* usePrelude hook infinite loop when StrictMode enabled ([1182b15](https://github.com/pavophilip/react-shader-fiber/commit/1182b15316faae3823f8f2d50923b53856c1360c))
+
 ## [1.2.8](https://github.com/pavophilip/react-shader-fiber/compare/fiber-v1.2.7...fiber-v1.2.8) (2024-01-11)
 
 
