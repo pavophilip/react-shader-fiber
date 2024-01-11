@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.5](https://github.com/pavophilip/react-shader-fiber/compare/fiber-v1.2.4...fiber-v1.2.5) (2024-01-11)
+
+
+### Bug Fixes
+
+* update deps ([b7b7288](https://github.com/pavophilip/react-shader-fiber/commit/b7b72888ed4b0ea5e7ba069dabe2bd50334b2361))
+
 ## [1.2.4](https://github.com/pavophilip/react-shader-fiber/compare/fiber-v1.2.3...fiber-v1.2.4) (2024-01-11)
 
 
