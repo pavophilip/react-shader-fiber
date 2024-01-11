@@ -1,7 +1,7 @@
 {
   "name": "@react-shader/stdlib",
   "private": false,
-  "version": "1.1.8",
+  "version": "1.1.9",
   "type": "module",
   "main": "./dist/rsf-stdlib.js",
   "types": "./dist/main.d.ts",
