@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.9](https://github.com/pavophilip/react-shader-fiber/compare/stdlib-v1.1.8...stdlib-v1.1.9) (2024-01-11)
+
+
+### Bug Fixes
+
+* Improve normalizeChildren utility and add watch script ([46d8bc0](https://github.com/pavophilip/react-shader-fiber/commit/46d8bc0ceeb6516405283130d79e00d6b0c3ca29))
+
 ## [1.1.8](https://github.com/pavophilip/react-shader-fiber/compare/stdlib-v1.1.7...stdlib-v1.1.8) (2024-01-05)
 
 

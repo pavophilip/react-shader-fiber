@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.4](https://github.com/pavophilip/react-shader-fiber/compare/fiber-v1.2.3...fiber-v1.2.4) (2024-01-11)
+
+
+### Bug Fixes
+
+* add debug mode for player, prelude hook, fallback fragment shader ([6ebcaeb](https://github.com/pavophilip/react-shader-fiber/commit/6ebcaebb9f275b035ece8eca3989b41ea24ecf98))
+
 ## [1.2.3](https://github.com/pavophilip/react-shader-fiber/compare/fiber-v1.2.2...fiber-v1.2.3) (2024-01-05)
 
 
