@@ -8,7 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@react-shader/fiber": "^1.2.7",
+    "@react-shader/fiber": "^1.2.8",
     "indent.js": "^0.3.5",
     "leva": "^0.9.35",
     "next": "^14.0.4",
