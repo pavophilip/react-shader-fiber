@@ -26,6 +26,9 @@ const TestApp = () => {
         onUpdateTree={(prelude) => {
           console.log("tree", prelude);
         }}
+        onUpdateGlsl={(glsl) => {
+          console.log("glsl", glsl);
+        }}
       >
         <Shader>
           <Gradient>

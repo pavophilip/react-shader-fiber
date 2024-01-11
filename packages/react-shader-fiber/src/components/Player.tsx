@@ -45,12 +45,14 @@ const Player: FC<
     children: ReactElement;
     onUpdateTree?: (tree: object) => void;
     onUpdatePrelude?: (prelude: string) => void;
+    onUpdateGlsl?: (glsl: string) => void;
   }>
 > = ({
   width = 300,
   height = 300,
   onUpdateTree,
   onUpdatePrelude,
+  onUpdateGlsl,
   debug = false,
   children,
 }) => {
@@ -70,6 +72,10 @@ const Player: FC<
     return prelude.join("\n");
   }, [prelude]);
 
+  const fs = useMemo(() => {
+    return toGLSL(preludeStr)(tree);
+  }, [preludeStr, tree]);
+
   useEffect(() => {
     if (onUpdateTree) onUpdateTree(tree);
   }, [onUpdateTree, tree]);
@@ -78,9 +84,11 @@ const Player: FC<
     if (onUpdatePrelude) onUpdatePrelude(preludeStr);
   }, [onUpdatePrelude, preludeStr]);
 
-  const params = useMemo(() => {
-    const fs = toGLSL(preludeStr)(tree);
+  useEffect(() => {
+    if (onUpdateGlsl) onUpdateGlsl(fs);
+  }, [onUpdateGlsl, fs]);
 
+  const params = useMemo(() => {
     return {
       vs: VS,
       fs,
@@ -90,7 +98,7 @@ const Player: FC<
       uniforms: {},
       debug,
     };
-  }, [debug, preludeStr, tree]);
+  }, [debug, fs]);
 
   const player = useCloturPlayer(params);
 
