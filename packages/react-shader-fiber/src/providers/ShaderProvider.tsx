@@ -1,13 +1,7 @@
-import {
-  createContext,
-  FC,
-  PropsWithChildren,
-  ReactElement,
-  useContext,
-} from "react";
+import { createContext, FC, PropsWithChildren, ReactElement } from "react";
 import { Input, Output, Uniform } from "@react-shader/stdlib";
 
-const ShaderProviderContext = createContext<{
+export const ShaderProviderContext = createContext<{
   prelude: string | string[];
   time: ReactElement;
   coords: ReactElement;
@@ -18,16 +12,6 @@ const ShaderProviderContext = createContext<{
   coords: <Input type={"vec2"} id={"vCoords"} />,
   time: <Uniform id={"u_time"} type={"float"} />,
 });
-export const useTime = () => {
-  return useContext(ShaderProviderContext).time;
-};
-
-export const useColor = () => {
-  return useContext(ShaderProviderContext).color;
-};
-export const useCoords = () => {
-  return useContext(ShaderProviderContext).coords;
-};
 
 const ShaderProvider: FC<
   PropsWithChildren<{

@@ -1,7 +1,3 @@
-import ShaderProvider, {
-  useColor,
-  useCoords,
-  useTime,
-} from "./ShaderProvider.tsx";
+import ShaderProvider from "./ShaderProvider.tsx";
 
-export { useCoords, useColor, useTime, ShaderProvider };
+export { ShaderProvider };
