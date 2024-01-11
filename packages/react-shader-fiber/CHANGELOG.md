@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.8](https://github.com/pavophilip/react-shader-fiber/compare/fiber-v1.2.7...fiber-v1.2.8) (2024-01-11)
+
+
+### Bug Fixes
+
+* onUpdateGlsl callback ([5edbf2b](https://github.com/pavophilip/react-shader-fiber/commit/5edbf2bf9489d34502cec8ea07c98408fad416bf))
+
 ## [1.2.7](https://github.com/pavophilip/react-shader-fiber/compare/fiber-v1.2.6...fiber-v1.2.7) (2024-01-11)
 
 
