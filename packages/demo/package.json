@@ -15,9 +15,9 @@
     "@emotion/styled": "^11.11.0",
     "@fontsource/inter": "^5.0.16",
     "@mui/joy": "^5.0.0-beta.19",
-    "@react-shader/fiber": "^1.2.0",
-    "@react-shader/renderer": "^1.1.1",
-    "@react-shader/stdlib": "^1.1.6",
+    "@react-shader/fiber": "^1.2.4",
+    "@react-shader/renderer": "^1.1.2",
+    "@react-shader/stdlib": "^1.1.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-merge-refs": "^2.1.1"
