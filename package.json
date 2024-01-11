@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "update-packages": " npm update @react-shader/renderer @react-shader/stdlib @react-shader/fiber --save",
     "bump-renderer-version": "npm i @react-shader/renderer@latest -w=@react-shader/fiber -w=@react-shader/stdlib",
     "bump-stdlib-version": "npm i @react-shader/stdlib@latest -w=@react-shader/fiber",
     "rebuild-libs": "npm run build -w @react-shader/renderer && npm i @react-shader/renderer -w @react-shader/fiber && npm run build -w @react-shader/fiber && npm i @react-shader/fiber -w @react-shader/demo"

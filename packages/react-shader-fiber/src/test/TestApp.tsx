@@ -1,9 +1,8 @@
 import { Color, Player, Shader } from "../components";
 import gradient from "./gradient.glsl?raw";
 import { Call, X } from "@react-shader/stdlib";
-import { useCoords } from "../providers";
 import { FC, PropsWithChildren } from "react";
-import usePrelude from "../hooks/usePrelude.tsx";
+import { useCoords, usePrelude } from "../hooks";
 
 const Gradient: FC<PropsWithChildren> = ({ children }) => {
   usePrelude(gradient);
