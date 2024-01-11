@@ -61,7 +61,7 @@ const Player: FC<
   );
 
   const tree = useRenderShader(
-    <PreludeProvider setPrelude={setPrelude}>
+    <PreludeProvider prelude={prelude} setPrelude={setPrelude}>
       {cloneElement(children, {
         prelude,
       })}

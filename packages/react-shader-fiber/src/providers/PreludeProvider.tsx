@@ -5,6 +5,7 @@ import {
   PropsWithChildren,
   SetStateAction,
   useCallback,
+  useMemo,
 } from "react";
 
 export const PreludeContext = createContext<{
@@ -15,21 +16,28 @@ export const PreludeContext = createContext<{
 
 const PreludeProvider: FC<
   PropsWithChildren<{
+    prelude: string[];
     setPrelude: Dispatch<SetStateAction<string[]>>;
   }>
-> = ({ setPrelude, children }) => {
+> = ({ prelude, setPrelude, children }) => {
   const appendPrelude = useCallback(
-    (prelude: string) => {
-      setPrelude((curr: string[]) => {
-        return curr.indexOf(prelude) === -1 ? [...curr, prelude] : curr;
-      });
+    (newPrelude: string) => {
+      if (prelude.indexOf(newPrelude) === -1) {
+        setPrelude([...prelude, newPrelude]);
+      }
     },
-    [setPrelude],
+    [prelude, setPrelude],
   );
+
+  const value = useMemo(() => {
+    return {
+      appendPrelude,
+      prelude,
+    };
+  }, [appendPrelude, prelude]);
+
   return (
-    <PreludeContext.Provider value={{ appendPrelude }}>
-      {children}
-    </PreludeContext.Provider>
+    <PreludeContext.Provider value={value}>{children}</PreludeContext.Provider>
   );
 };
 
