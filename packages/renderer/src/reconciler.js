@@ -1,6 +1,7 @@
 import ReactReconciler from "react-reconciler";
 import { DefaultEventPriority } from "react-reconciler/cjs/react-reconciler-constants.production.min.js";
 import createElement from "./createElement.js";
+import { version } from "../package.json";
 
 const HostConfig = {
   noTimeout: -1,
@@ -140,5 +141,11 @@ const HostConfig = {
 };
 
 const Reconciler = ReactReconciler(HostConfig);
+
+Reconciler.injectIntoDevTools({
+  bundleType: import.meta.env.DEV ? 1 : 0,
+  rendererPackageName: "react-shader-fiber",
+  version,
+});
 
 export default Reconciler;
