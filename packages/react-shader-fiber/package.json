@@ -19,7 +19,7 @@
   "license": "MIT",
   "author": "Philip Pavo",
   "dependencies": {
-    "@clotur/player": "^0.1.8",
+    "@clotur/player": "^0.1.10",
     "@react-shader/renderer": "^1.1.4",
     "@react-shader/stdlib": "^1.1.10",
     "react": "^18.2.0",

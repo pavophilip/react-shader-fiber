@@ -5,6 +5,7 @@ import {
   ReactElement,
   useEffect,
   useMemo,
+  useRef,
   useState,
 } from "react";
 import useRenderShader from "../hooks/useRenderShader.tsx";
@@ -56,6 +57,7 @@ const Player: FC<
   debug = false,
   children,
 }) => {
+  const updRef = useRef(() => {});
   const [prelude, setPrelude] = useState<string[]>(
     normalizePrelude(children?.props.prelude),
   );
@@ -66,6 +68,7 @@ const Player: FC<
         prelude,
       })}
     </PreludeProvider>,
+    updRef,
   );
 
   const preludeStr = useMemo(() => {
@@ -100,11 +103,15 @@ const Player: FC<
     };
   }, [debug, fs]);
 
-  const player = useCloturPlayer(params);
+  const { ref, updateFragmentShader } = useCloturPlayer(params);
+
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-expect-error
+  updRef.current = (tree) => updateFragmentShader(toGLSL(preludeStr)(tree));
 
   return (
     <div
-      {...player}
+      ref={ref}
       style={{
         width,
         height,

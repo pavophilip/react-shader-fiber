@@ -1,7 +1,14 @@
 import { Color } from "../components";
+import { useEffect, useState } from "react";
 
 const TestComponent = () => {
-  return <Color hex={"#ff00ff"} />;
+  const [state, setState] = useState("#ff0000");
+  useEffect(() => {
+    setTimeout(() => {
+      setState("#af00f0");
+    }, 1000);
+  }, []);
+  return <Color hex={state} />;
 };
 
 export default TestComponent;
