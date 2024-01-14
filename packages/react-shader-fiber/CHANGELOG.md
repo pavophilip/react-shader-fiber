@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.12](https://github.com/pavophilip/react-shader-fiber/compare/fiber-v1.2.11...fiber-v1.2.12) (2024-01-14)
+
+
+### Bug Fixes
+
+* implement onUpdate, refactor reconciler ([64bd15a](https://github.com/pavophilip/react-shader-fiber/commit/64bd15a121f5bd2efc47e90a3f1f081f13cfeb3e))
+
 ## [1.2.11](https://github.com/pavophilip/react-shader-fiber/compare/fiber-v1.2.10...fiber-v1.2.11) (2024-01-14)
 
 
