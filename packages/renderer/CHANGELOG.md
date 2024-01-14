@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.3](https://github.com/pavophilip/react-shader-fiber/compare/renderer-v1.1.2...renderer-v1.1.3) (2024-01-14)
+
+
+### Bug Fixes
+
+* add injectIntoDevTools ([9e445d7](https://github.com/pavophilip/react-shader-fiber/commit/9e445d7bafdc93c3fd307a5718557454f50742e2))
+
 ## [1.1.2](https://github.com/pavophilip/react-shader-fiber/compare/renderer-v1.1.1...renderer-v1.1.2) (2024-01-04)
 
 
