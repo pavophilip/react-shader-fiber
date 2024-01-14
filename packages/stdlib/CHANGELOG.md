@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.10](https://github.com/pavophilip/react-shader-fiber/compare/stdlib-v1.1.9...stdlib-v1.1.10) (2024-01-14)
+
+
+### Bug Fixes
+
+* update version ([1b59d9d](https://github.com/pavophilip/react-shader-fiber/commit/1b59d9d69bd816eb37294a32cc151f798c8c2d00))
+
 ## [1.1.9](https://github.com/pavophilip/react-shader-fiber/compare/stdlib-v1.1.8...stdlib-v1.1.9) (2024-01-11)
 
 
