@@ -1,11 +1,13 @@
-import Reconciler from "./reconciler.js";
+import ReconcilerNew from "./reconciler.js";
 import Program from "./elements/Program.js";
 import Test from "./elements/Test.js";
 
-const render = (element, onUpdate) => {
-  const rootElement = new Program({ onUpdate });
+const render = (element, onUpdate = () => {}) => {
+  const rootElement = new Program({
+    onUpdate,
+  });
 
-  const root = Reconciler.createContainer(
+  const root = ReconcilerNew.createContainer(
     rootElement,
     0,
     null,
@@ -16,7 +18,7 @@ const render = (element, onUpdate) => {
     null,
   );
 
-  Reconciler.updateContainer(element, root, null, () => {});
+  ReconcilerNew.updateContainer(element, root, null, () => {});
 
   return rootElement.ast;
 };
@@ -24,7 +26,7 @@ const render = (element, onUpdate) => {
 export const testRender = (element) => {
   const rootElement = new Test();
 
-  const root = Reconciler.createContainer(
+  const root = ReconcilerNew.createContainer(
     rootElement,
     0,
     null,
@@ -35,7 +37,7 @@ export const testRender = (element) => {
     null,
   );
 
-  Reconciler.updateContainer(element, root, null, () => {});
+  ReconcilerNew.updateContainer(element, root, null, () => {});
 
   return rootElement.ast;
 };

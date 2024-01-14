@@ -3,6 +3,7 @@ import gradient from "./gradient.glsl?raw";
 import { Call, X } from "@react-shader/stdlib";
 import { FC, PropsWithChildren } from "react";
 import { useCoords, usePrelude } from "../hooks";
+import TestComponent from "./TestComponent.tsx";
 
 const Gradient: FC<PropsWithChildren> = ({ children }) => {
   usePrelude(gradient);
@@ -35,6 +36,22 @@ const TestApp = () => {
             <Color hex={"#3b24ff"} />
             <Color hex={"#ff00ff"} />
           </Gradient>
+        </Shader>
+      </Player>
+
+      <Player
+        onUpdatePrelude={(prelude) => {
+          console.log("prelude", prelude);
+        }}
+        onUpdateTree={(prelude) => {
+          console.log("tree", prelude);
+        }}
+        onUpdateGlsl={(glsl) => {
+          console.log("glsl", glsl);
+        }}
+      >
+        <Shader>
+          <TestComponent />
         </Shader>
       </Player>
     </div>

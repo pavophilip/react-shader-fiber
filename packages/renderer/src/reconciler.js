@@ -9,37 +9,20 @@ const HostConfig = {
   supportsMutation: false,
   supportsPersistence: true,
   supportsHydration: false,
-  cloneInstance: function (
-    instance,
-    updatePayload,
-    type,
-    oldProps,
-    newProps,
-    internalInstanceHandle,
-    keepChildren,
-    recyclableInstance,
-  ) {
-    const element = createElement(type, newProps);
 
-    const newChildren = keepChildren ? newProps : undefined;
+  // -------------------
+  //      Core
+  // -------------------
 
-    element.children = newChildren;
-    return element;
+  detachDeletedInstance: (node) => {},
+  commitMount: function (instance, _type, _newProps) {
+    instance.commitMount();
   },
+
   createInstance: function (type, props, _rootContainerInstance, _hostContext) {
     return createElement(type, props);
   },
-  createContainerChildSet: function (...args) {
-    return [];
-  },
-  appendChildToContainerChildSet: function (childSet, child) {
-    childSet.push(child);
-  },
-  finalizeContainerChildren: function (container, newChildren) {
-    container.args = newChildren;
-    container.onUpdate(newChildren.map((child) => child.ast));
-  },
-  replaceContainerChildren: function (...args) {},
+
   appendInitialChild: function (parentInstance, child) {
     parentInstance.appendChild(child);
   },
@@ -72,21 +55,6 @@ const HostConfig = {
     return true;
   },
   resetAfterCommit: function (_containerInfo) {},
-  resetTextContent: function (_instance) {},
-  commitTextUpdate: function (_textInstance, _oldText, _newText) {
-    throw new Error("commitTextUpdate should not be called");
-  },
-  removeChild: function (parentInstance, child) {
-    // parentInstance.removeChild(child);
-  },
-  removeChildFromContainer: function (_container, _child) {},
-  insertBefore: function (_parentInstance, _child, _beforeChild) {},
-  appendChildToContainer: function (container, child) {
-    container.appendChild(child);
-  },
-  appendChild: function (parentInstance, child) {
-    parentInstance.appendChild(child);
-  },
   shouldSetTextContent: function (_type, props) {
     if (typeof props.children === "string") return true;
     return false;
@@ -101,16 +69,7 @@ const HostConfig = {
   ) {
     return {};
   },
-  commitUpdate: function (
-    instance,
-    _updatePayload,
-    _type,
-    _oldProps,
-    newProps,
-  ) {},
-  commitMount: function (instance, _type, _newProps) {
-    instance.commitMount();
-  },
+
   scheduleTimeout: function (handler, timeout) {
     return setTimeout(handler, timeout);
   },
@@ -118,10 +77,7 @@ const HostConfig = {
     return clearTimeout(handle);
   },
   preparePortalMount: function () {},
-  scheduleMicrotask: function (callback) {
-    queueMicrotask(callback);
-  },
-  clearContainer: function (_container) {},
+
   getCurrentEventPriority: function () {
     return DefaultEventPriority;
   },
@@ -129,23 +85,66 @@ const HostConfig = {
     return null;
   },
   getInstanceFromScope: function (scopeInstance) {
-    // if (scopeInstance.node) {
-    //     return scopeInstance;
-    // }
     return null;
   },
-  beforeActiveInstanceBlur: function () {},
-  afterActiveInstanceBlur: function () {},
-  prepareScopeUpdate: function (_scopeInstance, _instance) {},
-  detachDeletedInstance: function (_node) {},
+
+  // -------------------
+  //     Persistence
+  //     (optional)
+  // -------------------
+
+  cloneInstance: function (
+    instance,
+    updatePayload,
+    type,
+    oldProps,
+    newProps,
+    internalInstanceHandle,
+    keepChildren,
+    recyclableInstance,
+  ) {
+    const element = createElement(type, newProps);
+
+    const newChildren = keepChildren ? newProps : [];
+
+    element.children = newChildren;
+
+    return element;
+  },
+
+  createContainerChildSet: function (...args) {
+    return [];
+  },
+
+  appendChildToContainerChildSet: function (childSet, child) {
+    childSet.push(child);
+  },
+
+  finalizeContainerChildren: function (container, newChildren) {
+    container.args = newChildren;
+    container.onUpdate(newChildren.map((child) => child.ast));
+  },
+
+  replaceContainerChildren: function (container, newChildren) {
+    // Noop - children will be replaced in finalizeContainerChildren
+  },
+
+  // -------------------
+  //      Microtasks
+  //     (optional)
+  // -------------------
+
+  scheduleMicrotask: function (callback) {
+    queueMicrotask(callback);
+  },
 };
 
-const Reconciler = ReactReconciler(HostConfig);
+const ReconcilerNew = ReactReconciler(HostConfig);
 
-Reconciler.injectIntoDevTools({
+ReconcilerNew.injectIntoDevTools({
   bundleType: import.meta.env.DEV ? 1 : 0,
   rendererPackageName: "react-shader-fiber",
   version,
 });
 
-export default Reconciler;
+export default ReconcilerNew;
