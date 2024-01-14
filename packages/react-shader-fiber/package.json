@@ -20,7 +20,7 @@
   "author": "Philip Pavo",
   "dependencies": {
     "@clotur/player": "^0.1.8",
-    "@react-shader/renderer": "^1.1.3",
+    "@react-shader/renderer": "^1.1.4",
     "@react-shader/stdlib": "^1.1.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
