@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.4](https://github.com/pavophilip/react-shader-fiber/compare/renderer-v1.1.3...renderer-v1.1.4) (2024-01-14)
+
+
+### Bug Fixes
+
+* implement onUpdate, refactor reconciler ([64bd15a](https://github.com/pavophilip/react-shader-fiber/commit/64bd15a121f5bd2efc47e90a3f1f081f13cfeb3e))
+
 ## [1.1.3](https://github.com/pavophilip/react-shader-fiber/compare/renderer-v1.1.2...renderer-v1.1.3) (2024-01-14)
 
 
