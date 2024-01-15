@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.16](https://github.com/pavophilip/react-shader-fiber/compare/fiber-v1.2.15...fiber-v1.2.16) (2024-01-15)
+
+
+### Bug Fixes
+
+* cleanup webgl context in the player ([de523b9](https://github.com/pavophilip/react-shader-fiber/commit/de523b9a6ee819c8812be7d29165129541be5d88))
+
 ## [1.2.15](https://github.com/pavophilip/react-shader-fiber/compare/fiber-v1.2.14...fiber-v1.2.15) (2024-01-15)
 
 
