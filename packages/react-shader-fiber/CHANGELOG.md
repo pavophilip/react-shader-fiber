@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.15](https://github.com/pavophilip/react-shader-fiber/compare/fiber-v1.2.14...fiber-v1.2.15) (2024-01-15)
+
+
+### Bug Fixes
+
+* update player ([3bc4b86](https://github.com/pavophilip/react-shader-fiber/commit/3bc4b86ce94561f60b8b49b4bf2f00590cfac790))
+
 ## [1.2.14](https://github.com/pavophilip/react-shader-fiber/compare/fiber-v1.2.13...fiber-v1.2.14) (2024-01-14)
 
 
